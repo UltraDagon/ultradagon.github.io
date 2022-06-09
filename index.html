@@ -1,7 +1,65 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<head>
+    <link rel="stylesheet" href="general.css">
+    <style>
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .section {
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            width: 200px;
+        }
+
+        .section img {
+            width: 200px;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body id="img">
+    <div class="foreground">
+        <center>
+            <h1>Dagon's Website</h1>
+        </center>
+        <div class="links">
+            <a class="section" href="todo">
+                <img src="images/todo-list.png">
+                <p>To-do List</p>
+            </a>
+            
+            <a class="section" href="todo">
+                <img src="images/todo-list.png">
+                <p>To-do List</p>
+            </a>
+
+            <a class="section" href="todo">
+                <img src="images/todo-list.png">
+                <p>To-do List</p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        var images = [
+            'adventure-time.png',
+            'kurzgesagt.png'
+        ];
+
+        var img = document.getElementById("img");
+        
+        function imgDisp(num) {
+            var num = Math.floor(Math.random() * 2);
+            img.style.backgroundImage = 'url("images/backgrounds/' + images[num] + '")';
+            img.style.backgroundRepeat = "no-repeat";
+        }
+        imgDisp();
+    </script>
 </body>
 </html>

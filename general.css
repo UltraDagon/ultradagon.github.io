@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
+}
+
+.foreground {
+    background: rgba(25,255,255,0.75);
+    height: 100vh;
+    margin-left: 10%;
+    margin-right: 10%;
+}
