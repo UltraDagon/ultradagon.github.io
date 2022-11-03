@@ -6,18 +6,36 @@
         ul {list-style: inside;}
     </style>
 </head>
-<body>
+<body id="img">
+    <!--Navigation bar-->
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+    </ul>
+    <!--end of Navigation bar-->
+
     <div class="foreground">
-        <center height="500px">
+        <center class="title">
             <h1>Tetris</h1>
-            <iframe frameborder="0" scrolling="no" width="100%" height="100%" onload="resizeIframe(this)" src="https://replit.com/@UltraDagon/Tetris?embed=true"></iframe>
         </center>
+        <center style="margin-left:25%; margin-right:25%;">
+            <iframe frameborder="0" scrolling="no" width="100%" height="500px" onload="resizeIframe(this)" src="https://replit.com/@UltraDagon/Tetris?embed=true"></iframe>
+            </p>
+        </center>
+
+        <div style="margin-left:25%; margin-right:25%;">
+            <h2>How to play:</h2>
+            <p>Click the "Run example" button at the top right of the game window, you may need to refresh the page if nothing happens.</p>
+            <h2>Controls:</h2>
+            <p>Directional arrows/ASD - Move left, right, and down<br>
+                Up arrow/W/Q - Rotate piece counter clockwise<br>
+                E - Rotate piece clockwise<br>
+                Left Shift - Hold piece<br>
+                R - Restart<br>
+                G - Toggle guidelines<br>
+                L - Increase level
+        </div>
     </div>
     
-    <script src="background.js">
-    function resizeIframe(obj) {
-        obj.style.height = obj.contentWindow.document.documentElement.height + 'px';
-    }
-    </script>
+    <script src="background.js"></script>
 </body>
 </html>
