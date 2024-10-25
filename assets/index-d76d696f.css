@@ -1,4 +1,4 @@
-@charset "UTF-8";/*!
+@charset "UTF-8";img{width:100%;left:0;opacity:.5;position:absolute}.container{position:relative;background:lightblue;overflow:hidden;display:block;margin-bottom:1em;aspect-ratio:16 / 9}.text-container{position:absolute;top:.5em;left:1em}body{height:100vh}.layout-container{width:min(80em,100%);margin:auto;columns:3 20em;column-gap:1em}/*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
