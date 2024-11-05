@@ -1,0 +1,42 @@
+.nav-container {
+  position: sticky;
+  top: 0;
+  padding: 2em;
+  display: inline-flex;
+  width: 100vw;
+  background-image: linear-gradient(to top, rgba(0, 217, 255, 0), rgba(0, 217, 255, 0.25));
+}
+
+.site-title {
+  top: 0;
+  color: wheat;
+}
+
+.nav-links-container {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.nav-links {
+  color: wheat;
+  list-style-type: none;
+}
+
+.nav-links li {
+  float: right;
+  text-underline-offset: 0em;
+  text-decoration: underline rgba(245,222,179,0);
+  transition-property: text-underline-offset, text-decoration;
+  transition-duration: 0.5s;
+}
+
+.nav-links li a {
+  padding: 1em;
+  height: 100%;
+}
+
+.nav-links li:hover {
+  text-decoration: underline wheat;
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: 0.5em;
+}
