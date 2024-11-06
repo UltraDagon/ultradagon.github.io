@@ -35,7 +35,13 @@
   height: 100%;
 }
 
-.nav-links li:hover {
+.nav-links .active {
+  text-decoration: underline wheat;
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: 0.5em;
+}
+
+.nav-links li:not(.active):hover {
   text-decoration: underline wheat;
   text-decoration-thickness: 0.2em;
   text-underline-offset: 0.5em;
