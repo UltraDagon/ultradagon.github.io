@@ -1,3 +1,26 @@
 h4 {
   color: whitesmoke;
 }
+
+.split-container {
+  background: #000;
+  width: 80%;
+  margin: auto;
+  columns: 2;
+  column-gap: 10%;
+}
+
+.split-container div {
+  width: 100%;
+  background-image: linear-gradient(to right,red,blue);
+}
+
+.split-container .right {
+  text-align: center;
+}
+
+.split-container img {
+  width: min(90%,30em);
+  margin-left: auto;
+  aspect-ratio: 1;
+}

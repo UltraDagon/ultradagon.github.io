@@ -20,6 +20,8 @@
   left: 1em;
   font-size: 1.7em;
   font-weight: bold;
+  text-align: left;
+  max-width: 80%;
 }
 
 .panel-container .github {
@@ -69,11 +71,12 @@
   left: 0;
   opacity: var(--opacity-high);
   position: absolute;
-  transition: opacity 0.5s;
+  transition: opacity 0.5s, filter 0.5s;
 }
 
 .panel-container:hover .bg-img {
   opacity: var(--opacity-low);
+  filter: blur(4px);
 }
 
 .panel-container:hover {

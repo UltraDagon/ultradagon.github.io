@@ -4,10 +4,9 @@ import "./home.css";
 function Home() {
   return (
     <div>
-      <h4>
-        This is the home page! TODO: Put a picture of myself, links to LinkedIn,
-        GitHub, Email
-      </h4>
+      <h4>This is the home page! TODO: links to LinkedIn, GitHub, Email</h4>
+      <p>Dagon Williams</p>
+      <p>College student</p>
       {/*<PanelContainer4 />*/}
     </div>
   );

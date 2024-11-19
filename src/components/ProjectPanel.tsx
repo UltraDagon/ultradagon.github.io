@@ -15,7 +15,22 @@ interface Props {
 function ProjectPanel(props: Props) {
   return (
     <div className="panel-container" style={{ background: props.filterColor }}>
-      <Link to={typeof props.to !== "undefined" ? props.to! : "/all-projects"}>
+      <Link
+        to={
+          /*Upon clicking the panel: If to is defined, use props.to; Else: if github is defined, use github; else: if neither are defined, stay on this page.*/
+          typeof props.to !== "undefined"
+            ? props.to!
+            : typeof props.github !== "undefined"
+            ? props.github!
+            : "/all-projects"
+        }
+        target={
+          /*If to isnt defined and github is, clicking the panel will target a new tab*/
+          typeof props.to == "undefined" && typeof props.github !== "undefined"
+            ? "_blank"
+            : "_self"
+        }
+      >
         <img
           className="bg-img border"
           src={props.image}
