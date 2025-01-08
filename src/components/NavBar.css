@@ -3,12 +3,14 @@
   top: 0;
   padding: 2em;
   display: inline-flex;
-  width: 100vw;
+  width: 100%;
   background-image: linear-gradient(to top, rgba(0, 217, 255, 0), rgba(0, 217, 255, 0.25));
 }
 
 .site-title {
   top: 0;
+  height: 2em;
+  width: 20em;
   color: wheat;
 }
 
