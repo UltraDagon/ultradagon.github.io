@@ -14,7 +14,8 @@ function Home() {
     <div className="main-container">
       <h1>Hey! I'm Dagon</h1>
       <p>
-        I'm a 21-year-old college student studying Computer Science in Missouri.
+        I'm a 21-year-old college student studying Computer Science at Missouri
+        University of Science and Technology.
       </p>
       <p>
         I love game development, art, and taking on projects outside of my
