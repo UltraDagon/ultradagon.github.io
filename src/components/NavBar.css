@@ -1,10 +1,11 @@
 .nav-container {
   position: sticky;
   top: 0;
-  padding: 2em;
+  padding: 1em 2em 1em 2em;
   display: inline-flex;
   width: 100%;
-  background-image: linear-gradient(to top, rgba(0, 217, 255, 0), rgba(0, 217, 255, 0.25));
+  background-image: linear-gradient(to top, rgba(30, 0, 62, 0.75), rgba(15, 108, 158, 0.75));
+  z-index: 1;
 }
 
 .site-title {

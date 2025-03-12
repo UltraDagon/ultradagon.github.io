@@ -12,6 +12,7 @@ import unitysvg from "../assets/unity.svg";
 import cplusplussvg from "../assets/cplusplus.svg";
 import javascriptsvg from "../assets/javascript.svg";
 import javasvg from "../assets/java.svg";
+import appscriptsvg from "../assets/googleappsscript.svg";
 
 function AllProjects() {
   return (
@@ -25,6 +26,14 @@ function AllProjects() {
           github="https://github.com/UltraDagon/ultradagon.github.io"
           /*to="/all-projects/website"*/
           filterColor="#8673A1"
+        />
+        <ProjectPanel
+          projectName="Operating Standards Update"
+          description="A Google Apps Script program that transfers the information from a meeting minutes document to a Google spreadsheet."
+          image={projectblankpng}
+          technologies={[javascriptsvg, appscriptsvg]}
+          github="https://github.com/UltraDagon/OperatingStandardsUpdate"
+          filterColor="#102C54"
         />
         <ProjectPanel
           projectName="Futures Market Bank"
