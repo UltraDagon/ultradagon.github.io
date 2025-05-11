@@ -5,7 +5,7 @@ import "./layout.css";
 function Layout() {
   return (
     <>
-      <NavBar />
+      {<NavBar />}
       <main>
         <Outlet />
       </main>

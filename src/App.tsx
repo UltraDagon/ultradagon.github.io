@@ -6,6 +6,7 @@ import AllProjects from "./Pages/all_projects";
 import CurrentProjects from "./Pages/current_projects";
 import Layout from "./layout";
 import APWebsite from "./Pages/projects/website";
+import PortfolioV2 from "./Pages/portfoliov2";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/current-projects" element={<CurrentProjects />} />
           <Route path="/all-projects" element={<AllProjects />} />
           <Route path="/all-projects/website" element={<APWebsite />} />
+          <Route path="/portfoliov2" element={<PortfolioV2 />} />
         </Route>
       </Routes>
     </Router>
