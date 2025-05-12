@@ -1,3 +1,4 @@
+import ExpandingConsoleText from "./ExpandingConsoleText";
 import "./WindowBox.css";
 
 //https://stackoverflow.com/questions/52005083/how-to-define-css-variables-in-style-attribute-in-react-and-typescript
@@ -27,10 +28,57 @@ function WindowBox(props: Props) {
         }}
       >
         <div className="header">
-          <h4>[C:\] C:\WINDOWS\system32\cmd.exe</h4>
+          <p>[C:\] C:\WINDOWS\system32\cmd.exe</p>
         </div>
         <div className="content">
-          <h4>Hello World!</h4>
+          <div className="output">
+            <p>
+              C:\{">"}dir /b{"\n\n"}
+            </p>
+            <p>C:\ (Home)</p>
+            <p>..\ (Go Back){"\n\n"}</p>
+            <p>about_me</p>
+            <ExpandingConsoleText
+              head={"socials"}
+              children={[
+                <a
+                  href="https://github.com/UltraDagon"
+                  target="_blank"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <p>|--{">"} GitHub</p>
+                </a>,
+                <a
+                  href="https://linkedin.com/in/dagon-w"
+                  target="_blank"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <p>|--{">"} LinkedIn</p>
+                </a>,
+                <a
+                  href="mailto:dagon.williams@gmail.com"
+                  target="_blank"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <p>|--{">"} Email</p>
+                </a>,
+              ]}
+            />
+            {
+              <ExpandingConsoleText
+                head="projects"
+                children={[
+                  <p>|--{">"} Operating_Standards_Project</p>,
+                  <p>|--{">"} Portfolio_Website</p>,
+                  <p>|--{">"} No_More_Twitter_Blue</p>,
+                  <p>`--{">"} FIRST_Robotics_Scouting_App</p>,
+                ]}
+              />
+            }
+          </div>
+          <div className="input">
+            <p>C:\WINDOWS\system32{">"}dir</p>
+          </div>
         </div>
       </div>
     </>
@@ -48,6 +96,18 @@ projects/ ((expands on hover, all 'text/' will have these little dropdown menus 
 |--> Project 1
 |--> Project 2
 
+*/
+
+/*
+Not sure if I want to change it to me more accurate by changing the format from
+
+folder/
+file
+
+to
+
+folder
+file.abc
 */
 
 export default WindowBox;

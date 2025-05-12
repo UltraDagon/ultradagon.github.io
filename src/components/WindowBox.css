@@ -10,6 +10,7 @@
   height: var(--height);
   width: var(--width);
 
+  font-size: 2em;
   color: white;
 
   outline-style: solid;
@@ -39,16 +40,14 @@
   border-bottom: 2px solid rgb(172, 172, 172);
 }
 
-.window .header h4 {
+.window .header p {
   margin: 1px;
 }
 
 .window .content {
   height: 100%;
-  bottom: 0px;
 
   font-family: WindowsCommandPrompt, monospace;
-  font-size: larger;
 
   background-color: black;
 
@@ -63,4 +62,21 @@
 
   padding-left: 4px;
   padding-bottom: 1px;
+  padding-top: 1px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.window .content .output {
+  white-space: pre-line;
+  height: 100%;
+}
+
+.window .content .output p {
+  margin-bottom: 0;
+}
+
+.window .content .input p {
+  margin-bottom: 0;
 }
