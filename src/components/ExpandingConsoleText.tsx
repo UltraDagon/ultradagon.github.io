@@ -1,3 +1,5 @@
+import "./ExpandingConsoleText.css";
+
 import { useState, useEffect, ReactElement } from "react";
 
 interface Props {
@@ -21,12 +23,6 @@ function ExpandingConsoleText(props: Props) {
       if (!expanding && childrenCount > 0) {
         setChildrenCount(childrenCount - 1);
       }
-
-      /*childrenTextString +=
-          "\n" +
-          (i < childrenCount - 1 ? "|" : "`") +
-          "--> " +
-      props.children[i];*/
 
       setChildrenText(<p>{props.children.slice(0, childrenCount)}</p>);
     }, 100);
