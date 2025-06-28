@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, MouseEventHandler } from "react";
 import ExpandingConsoleText from "./ExpandingConsoleText";
 //import "./NavWindowBox.css";
 
@@ -10,6 +10,7 @@ declare module "react" {
 }
 
 interface Props {
+  onClickPopUp: Function;
   xpos: number;
   ypos: number;
   width: number;
@@ -95,7 +96,11 @@ function NavWindowBox(props: Props) {
           <ExpandingConsoleText
             head="projects"
             children={[
-              <p>
+              <p
+                onClick={() =>
+                  props.onClickPopUp("Operating Standards Project")
+                }
+              >
                 |--{">"}{" "}
                 <span className="popUpLink">Operating_Standards_Project</span>
               </p>,

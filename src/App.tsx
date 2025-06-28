@@ -8,6 +8,8 @@ import Layout from "./layout";
 import APWebsite from "./Pages/projects/website";
 import PortfolioV2 from "./Pages/portfoliov2";
 
+// Note for Dagon: npm run deploy -- -m "message"
+
 function App() {
   return (
     <Router>

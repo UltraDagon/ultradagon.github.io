@@ -7,6 +7,7 @@ declare module "react" {
 }
 
 interface Props {
+  title: string;
   xpos: number;
   ypos: number;
   width: number;
@@ -56,7 +57,7 @@ function PopUpWindow(props: Props) {
       }}
     >
       <div className="header" onMouseDown={Grab} onMouseUp={Release}>
-        <p>Header for Pop-Up Window!</p>
+        <p>{props.title}</p>
       </div>
       <div className="content">C-c-content</div>
     </div>
