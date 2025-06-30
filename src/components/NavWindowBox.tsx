@@ -10,11 +10,11 @@ declare module "react" {
 }
 
 interface Props {
-  onClickPopUp: Function;
   xpos: number;
   ypos: number;
   width: number;
   height: number;
+  onClickPopUp: Function;
 }
 
 function NavWindowBox(props: Props) {
@@ -73,19 +73,19 @@ function NavWindowBox(props: Props) {
           <ExpandingConsoleText
             head={"socials"}
             children={[
-              <p>
+              <p key={1}>
                 |--{">"}{" "}
                 <a href="https://github.com/UltraDagon" target="_blank">
                   GitHub
                 </a>
               </p>,
-              <p>
+              <p key={2}>
                 |--{">"}{" "}
                 <a href="https://linkedin.com/in/dagon-w" target="_blank">
                   LinkedIn
                 </a>
               </p>,
-              <p>
+              <p key={3}>
                 `--{">"}{" "}
                 <a href="mailto:dagon.williams@gmail.com" target="_blank">
                   Email
@@ -97,6 +97,7 @@ function NavWindowBox(props: Props) {
             head="projects"
             children={[
               <p
+                key={1}
                 onClick={() =>
                   props.onClickPopUp("Operating Standards Project")
                 }
@@ -104,9 +105,9 @@ function NavWindowBox(props: Props) {
                 |--{">"}{" "}
                 <span className="popUpLink">Operating_Standards_Project</span>
               </p>,
-              <p>|--{">"} Portfolio_Website</p>,
-              <p>|--{">"} No_More_Twitter_Blue</p>,
-              <p>`--{">"} FIRST_Robotics_Scouting_App</p>,
+              <p key={2}>|--{">"} Portfolio_Website</p>,
+              <p key={3}>|--{">"} No_More_Twitter_Blue</p>,
+              <p key={4}>`--{">"} FIRST_Robotics_Scouting_App</p>,
             ]}
           />
         </div>

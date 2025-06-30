@@ -11,6 +11,7 @@ function PortfolioV2() {
 
   function createPopUp(title: string) {
     // If window does not already exist
+    // TODO: limit count to 3
     if (-1 == popUpWindows.findIndex((e) => e.title == title)) {
       // Make a new pop up window
       setPopUpWindows([...popUpWindows, { title: title }]);
@@ -19,7 +20,6 @@ function PortfolioV2() {
   }
 
   function removePopUp(title: string) {
-    console.log("hello");
     setPopUpWindows(popUpWindows.filter((e) => e.title != title));
   }
 
@@ -31,11 +31,11 @@ function PortfolioV2() {
   return (
     <>
       <NavWindowBox
-        onClickPopUp={createPopUp}
         xpos={40}
         ypos={100}
         width={800}
         height={600}
+        onClickPopUp={createPopUp}
       />
       {popUpWindows.map((item) => (
         <PopUpWindow
@@ -45,6 +45,7 @@ function PortfolioV2() {
           ypos={500}
           width={800}
           height={600}
+          onClickCloseWindow={removePopUp}
         />
       ))}
     </>

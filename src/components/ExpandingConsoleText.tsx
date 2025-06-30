@@ -24,7 +24,7 @@ function ExpandingConsoleText(props: Props) {
         setChildrenCount(childrenCount - 1);
       }
 
-      setChildrenText(<p>{props.children.slice(0, childrenCount)}</p>);
+      setChildrenText(<>{props.children.slice(0, childrenCount)}</>);
     }, 100);
 
     return () => clearInterval(interval);
@@ -39,11 +39,15 @@ function ExpandingConsoleText(props: Props) {
   }
 
   return (
-    <p onMouseOver={Expand} onMouseOut={Contract}>
+    <div
+      className="expanding-console-text"
+      onMouseOver={Expand}
+      onMouseOut={Contract}
+    >
       {props.head}
       {expanding ? "/" : "\\"}
       {childrenText}
-    </p>
+    </div>
   );
 }
 

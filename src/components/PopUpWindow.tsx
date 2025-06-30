@@ -12,6 +12,7 @@ interface Props {
   ypos: number;
   width: number;
   height: number;
+  onClickCloseWindow: Function;
 }
 
 function PopUpWindow(props: Props) {
@@ -57,7 +58,17 @@ function PopUpWindow(props: Props) {
       }}
     >
       <div className="header" onMouseDown={Grab} onMouseUp={Release}>
-        <p>{props.title}</p>
+        <p>
+          {props.title}
+          <button
+            className="close"
+            onClick={() => props.onClickCloseWindow(props.title)}
+          >
+            &#128473;
+          </button>
+          <button>&#128470;</button>
+          <button>&#128469;</button>
+        </p>
       </div>
       <div className="content">C-c-content</div>
     </div>

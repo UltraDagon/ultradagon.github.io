@@ -1,3 +1,14 @@
+:root {
+  --window-light: rgb(255, 255, 255);
+  --window-normal: rgb(233, 234, 214);
+  --window-dark: rgb(116, 117, 107);
+}
+
+@font-face {
+  font-family: WindowsCommandPrompt;
+  src: url(../assets/Windows-Command-Prompt.woff);
+}
+
 /*body {
   background-image: url("../assets/windowsxp.jpg");
   background-size: cover;
@@ -8,11 +19,6 @@
 }*/
 
 /*This is taken out for the moment so v1 works properly*/
-
-@font-face {
-  font-family: WindowsCommandPrompt;
-  src: url(../assets/Windows-Command-Prompt.woff);
-}
 
 .window {
   position: absolute;
@@ -27,11 +33,11 @@
   outline-style: solid;
   outline-width: 4px;
   outline-offset: -6px;
-  outline-color: rgb(172, 172, 172);
+  outline-color: var(--window-normal);
 
   border-style: solid;
   border-width: 6px;
-  border-color: white gray gray white;
+  border-color: var(--window-light) var(--window-dark) var(--window-dark) var(--window-light);
 
   display: flex;
   flex-direction: column;
@@ -41,14 +47,13 @@
   width: 100%;
   padding-left: 4px;
   padding-bottom: 0;
-  z-index: 1;
 
   /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
   font-family: WindowsCommandPrompt, monospace;
 
   background-image: linear-gradient(90deg, darkblue, lightblue);
   
-  border-bottom: 2px solid rgb(172, 172, 172);
+  border-bottom: 2px solid var(--window-normal);
 
   cursor: move;
   user-select: none;
@@ -56,6 +61,23 @@
 
 .window .header p {
   margin: 1px;
+}
+
+.window .header button {
+  float: right;
+  padding: 0px;
+  margin: 1px 0px 1px 0px;
+  /*height: calc(1.33em - 3px);*/
+
+  background-color: var(--window-normal);
+  border-color: var(--window-light) var(--window-dark) var(--window-dark) var(--window-light);
+
+  line-height: calc(1.43em - 5px);
+  font-size: 0.7em;
+}
+
+.window .header .close {
+  margin: 1px 2px 1px 3px;
 }
 
 .window .content {
@@ -68,11 +90,11 @@
   outline-style: solid;
   outline-width: 0px;
   outline-offset: -2px;
-  outline-color: rgb(172, 172, 172);
+  outline-color: var(--window-normal);
   
   border-style: inset;
   border-width: 2px;
-  border-color: rgb(172, 172, 172);
+  border-color: var(--window-normal);
 
   padding-left: 4px;
   padding-bottom: 1px;
@@ -89,6 +111,10 @@
 
 .window .content .output p {
   margin-bottom: 0;
+}
+
+.window .content .output .expanding-console-text {
+  line-height: 1em;
 }
 
 .window .content .input p {
