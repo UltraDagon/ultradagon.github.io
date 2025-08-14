@@ -7,14 +7,27 @@ import { useLocation } from "react-router-dom";
 
 function PortfolioV2() {
   const location = useLocation(); // Used to tell when the site changes to get rid of the deleteme popup
-  const [popUpWindows, setPopUpWindows] = useState([{ title: "deleteme" }]);
+  const [popUpWindows, setPopUpWindows] = useState([
+    { title: "deleteme", xpos: -999, ypos: 0, width: 800, height: 600 },
+  ]);
 
-  function createPopUp(title: string) {
-    // If window does not already exist
-    // TODO: limit count to 3
-    if (-1 == popUpWindows.findIndex((e) => e.title == title)) {
+  function createPopUp(
+    title: string,
+    xpos: number,
+    ypos: number,
+    width: number,
+    height: number
+  ) {
+    // If window does not already exist and there are less than 3 popUpWindows
+    if (
+      -1 == popUpWindows.findIndex((e) => e.title == title) &&
+      popUpWindows.length < 3
+    ) {
       // Make a new pop up window
-      setPopUpWindows([...popUpWindows, { title: title }]);
+      setPopUpWindows([
+        ...popUpWindows,
+        { title: title, xpos: 100, ypos: 150, width: 800, height: 600 },
+      ]);
     }
     // TODO: do some kind of alert if the window already exists
   }
@@ -41,10 +54,10 @@ function PortfolioV2() {
         <PopUpWindow
           key={item.title}
           title={item.title}
-          xpos={40}
-          ypos={500}
-          width={800}
-          height={600}
+          xpos={item.xpos}
+          ypos={item.ypos}
+          width={item.width}
+          height={item.height}
           onClickCloseWindow={removePopUp}
         />
       ))}

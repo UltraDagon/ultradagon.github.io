@@ -121,6 +121,36 @@
   margin-bottom: 0;
 }
 
+.window .popup-content {
+  height: 100%;
+
+  background-color: black;
+  font-size: 0.8em;
+
+  font-family: WindowsCommandPrompt, monospace;
+
+  outline-style: solid;
+  outline-width: 0px;
+  outline-offset: -2px;
+  outline-color: var(--window-normal);
+  
+  border-style: inset;
+  border-width: 2px;
+  border-color: var(--window-normal);
+
+  padding-left: 4px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.window .popup-content .github-link {
+  font-size: 1.25em;
+  text-align: center;
+}
+
 .blink {
   animation-name: blink;
   animation-duration: 1.05s;

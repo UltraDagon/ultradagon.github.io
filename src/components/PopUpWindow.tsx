@@ -15,6 +15,26 @@ interface Props {
   onClickCloseWindow: Function;
 }
 
+const popupContent = new Map([
+  [
+    "Operating Standards Project",
+    <div className="popup-content">
+      <a
+        href="https://github.com/UltraDagon/ultradagon.github.io"
+        target="_blank"
+        className="github-link"
+      >
+        View on GitHub!
+      </a>
+      <br></br>
+      <p>
+        "Operating Standards Update" is a tool used to transfer data from
+        meeting minutes taken on a Google Doc into a Google Sheet.
+      </p>
+    </div>,
+  ],
+]);
+
 function PopUpWindow(props: Props) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [mouseOldPosition, setOldMousePosition] = useState({ x: 0, y: 0 });
@@ -70,7 +90,7 @@ function PopUpWindow(props: Props) {
           <button>&#128469;</button>
         </p>
       </div>
-      <div className="content">C-c-content</div>
+      {popupContent.get(props.title)}
     </div>
   );
 }
