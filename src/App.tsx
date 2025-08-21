@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 import Home from "./Pages/home";
 import About from "./Pages/about";
 import Blog from "./Pages/blog";
@@ -12,7 +17,7 @@ import PortfolioV2 from "./Pages/portfoliov2";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
@@ -24,7 +29,7 @@ function App() {
           <Route path="/portfoliov2" element={<PortfolioV2 />} />
         </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
