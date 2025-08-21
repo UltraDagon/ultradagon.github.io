@@ -12,6 +12,7 @@ function NavBar() {
     "Blog",
     "Current Projects",*/
     ["All Projects", "/all-projects"],
+    ["Portfolio V2", "/portfoliov2"],
   ].reverse();
   /*const links = [
     "/",
