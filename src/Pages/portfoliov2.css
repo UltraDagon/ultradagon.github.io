@@ -24,8 +24,9 @@
   position: absolute;
   margin-left: var(--xpos);
   margin-top: var(--ypos);
-  height: var(--height);
-  width: var(--width);
+  /*height: auto;*/
+  width: fit-content;
+  min-width: max-content;
 
   font-size: 2em;
   color: white;
@@ -44,7 +45,8 @@
 }
 
 .window .header {
-  width: 100%;
+  min-width: max-content;
+
   padding-left: 4px;
   padding-bottom: 0;
 
@@ -67,7 +69,6 @@
   float: right;
   padding: 0px;
   margin: 1px 0px 1px 0px;
-  /*height: calc(1.33em - 3px);*/
 
   background-color: var(--window-normal);
   border-color: var(--window-light) var(--window-dark) var(--window-dark) var(--window-light);
@@ -81,7 +82,10 @@
 }
 
 .window .content {
-  height: 100%;
+  width: var(--width);
+  height: var(--height);
+  min-width: 100%;
+  min-height: max-content;
 
   font-family: WindowsCommandPrompt, monospace;
 
@@ -96,12 +100,13 @@
   border-width: 2px;
   border-color: var(--window-normal);
 
-  padding-left: 4px;
-  padding-bottom: 1px;
-  padding-top: 1px;
+  padding: 1px 4px 1px 4px;
 
   display: flex;
   flex-direction: column;
+
+  overflow: auto;
+  resize: both;
 }
 
 .window .content .output {
@@ -115,6 +120,7 @@
 
 .window .content .output .expanding-console-text {
   line-height: 1em;
+  text-wrap-mode: nowrap;
 }
 
 .window .content .input p {
@@ -122,28 +128,7 @@
 }
 
 .window .popup-content {
-  height: 100%;
-
-  background-color: black;
   font-size: 0.8em;
-
-  font-family: WindowsCommandPrompt, monospace;
-
-  outline-style: solid;
-  outline-width: 0px;
-  outline-offset: -2px;
-  outline-color: var(--window-normal);
-  
-  border-style: inset;
-  border-width: 2px;
-  border-color: var(--window-normal);
-
-  padding-left: 4px;
-  padding-bottom: 1px;
-  padding-top: 1px;
-
-  display: flex;
-  flex-direction: column;
 }
 
 .window .popup-content .github-link {

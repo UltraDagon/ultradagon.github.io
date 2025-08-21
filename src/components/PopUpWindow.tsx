@@ -18,7 +18,7 @@ interface Props {
 const popupContent = new Map([
   [
     "Operating Standards Project",
-    <div className="popup-content">
+    <div className="content popup-content">
       <a
         href="https://github.com/UltraDagon/ultradagon.github.io"
         target="_blank"
