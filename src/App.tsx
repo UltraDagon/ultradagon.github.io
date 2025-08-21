@@ -1,10 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/home";
 import About from "./Pages/about";
 import Blog from "./Pages/blog";
 import AllProjects from "./Pages/all_projects";
 import CurrentProjects from "./Pages/current_projects";
-import Layout from "./layout";
 import APWebsite from "./Pages/projects/website";
 import PortfolioV2 from "./Pages/portfoliov2";
 import NavBar from "./components/NavBar";
@@ -13,7 +12,7 @@ import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,10 +20,10 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/current-projects" element={<CurrentProjects />} />
         <Route path="/all-projects" element={<AllProjects />} />
-        <Route path="/all-projects/website" element={<APWebsite />} />
+        {/*<Route path="/all-projects/website" element={<APWebsite />} />*/}
         <Route path="/portfoliov2" element={<PortfolioV2 />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
