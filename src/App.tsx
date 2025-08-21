@@ -4,7 +4,6 @@ import About from "./Pages/about";
 import Blog from "./Pages/blog";
 import AllProjects from "./Pages/all_projects";
 import CurrentProjects from "./Pages/current_projects";
-import APWebsite from "./Pages/projects/website";
 import PortfolioV2 from "./Pages/portfoliov2";
 import NavBar from "./components/NavBar";
 
