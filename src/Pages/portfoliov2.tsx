@@ -43,6 +43,7 @@ function PortfolioV2() {
 
   return (
     <>
+      <p className="test">Hello World!</p>
       <NavWindowBox
         xpos={40}
         ypos={100}

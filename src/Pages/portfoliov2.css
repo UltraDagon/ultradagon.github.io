@@ -123,11 +123,43 @@
 
 .window .popup-content {
   font-size: 0.8em;
+  min-height: 0;
 }
 
 .window .popup-content .github-link {
   font-size: 1.25em;
   text-align: center;
+  margin-top: 0.5em;
+}
+
+.window .popup-content a {
+  color:aquamarine;
+}
+
+.window .popup-content a:hover {
+  color: transparent;
+  text-decoration: underline blue;
+
+  background: linear-gradient(
+    90deg,
+    aquamarine,
+    blue,
+    aquamarine
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: gradientanimation 2s linear infinite;
+}
+
+@keyframes gradientanimation {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .blink {

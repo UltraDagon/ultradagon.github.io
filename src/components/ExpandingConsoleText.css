@@ -3,7 +3,7 @@ a, a:link, a:visited, a:active {
   color: white;
 }
 
-a:hover {
+.expanding-console-text a:hover {
   text-decoration: underline white;
   color: white !important;
   cursor: pointer;

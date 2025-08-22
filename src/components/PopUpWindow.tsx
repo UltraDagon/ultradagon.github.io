@@ -33,6 +33,32 @@ const popupContent = new Map([
       </p>
     </div>,
   ],
+  [
+    "Poppy's Scuttle Slugging",
+    <div className="content popup-content">
+      <a
+        href="https://github.com/UltraDagon/PoppysScuttleSlugging"
+        target="_blank"
+        className="github-link"
+      >
+        View on GitHub!
+      </a>
+      <br></br>
+      <p>
+        "Poppy's Scuttle Slugging" is the name of a fan game I made over the
+        summer of 2025. It was written with C++ using the SDL2 library for
+        graphics, and was inspired by Riot Games's{" "}
+        <a href="https://www.leagueoflegends.com/en-us/" target="_blank">
+          League of Legends
+        </a>{" "}
+        and Juicy Beast's{" "}
+        <a href="https://burritobison.com/" target="_blank">
+          Burrito Bison
+        </a>
+        .
+      </p>
+    </div>,
+  ],
 ]);
 
 function PopUpWindow(props: Props) {
