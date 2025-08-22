@@ -49,6 +49,19 @@ function NavWindowBox(props: Props) {
     setGrabbed(false);
   }
 
+  function clickPopUpLink(title: string) {
+    let parentWindow = document.getElementById("nav-window-output");
+    let width = 800;
+    let height = 600;
+
+    if (parentWindow != null) {
+      width = parentWindow.clientWidth;
+      height = parentWindow.clientHeight;
+    }
+
+    props.onClickPopUp(title, xpos + 50, ypos + 50, width, height);
+  }
+
   return (
     <div
       className="window"
@@ -63,7 +76,7 @@ function NavWindowBox(props: Props) {
         <p>[C:\] C:\WINDOWS\system32\cmd.exe</p>
       </div>
       <div className="content">
-        <div className="output">
+        <div id="nav-window-output" className="output">
           <p>
             C:\{">"}dir /b{"\n\n"}
           </p>
@@ -98,18 +111,26 @@ function NavWindowBox(props: Props) {
             children={[
               <p
                 key={1}
-                onClick={() =>
-                  props.onClickPopUp("Operating Standards Project")
-                }
+                onClick={() => clickPopUpLink("Poppy's Scuttle Slugging")}
+              >
+                |--{">"}{" "}
+                <span className="popUpLink">Poppy's_Scuttle_Slugging</span>
+              </p>,
+              <p
+                key={2}
+                onClick={() => clickPopUpLink("Operating Standards Project")}
               >
                 |--{">"}{" "}
                 <span className="popUpLink">Operating_Standards_Project</span>
               </p>,
-              <p key={2}>|--{">"} Portfolio_Website</p>,
-              <p key={3}>|--{">"} No_More_Twitter_Blue</p>,
-              <p key={4}>`--{">"} FIRST_Robotics_Scouting_App</p>,
+              <p key={3} onClick={() => clickPopUpLink("Portfolio Website")}>
+                |--{">"} <span className="popUpLink">Portfolio_Website</span>
+              </p>,
+              <p key={4}>|--{">"} No_More_Twitter_Blue</p>,
+              <p key={5}>`--{">"} FIRST_Robotics_Scouting_App</p>,
             ]}
           />
+          <br />
         </div>
         <div className="input">
           <p>

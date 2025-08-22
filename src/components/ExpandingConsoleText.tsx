@@ -44,8 +44,10 @@ function ExpandingConsoleText(props: Props) {
       onMouseOver={Expand}
       onMouseOut={Contract}
     >
-      {props.head}
-      {expanding ? "/" : "\\"}
+      <p>
+        {props.head}
+        {expanding ? "/" : "\\"}
+      </p>
       {childrenText}
     </div>
   );

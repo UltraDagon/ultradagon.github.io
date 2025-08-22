@@ -100,8 +100,6 @@
   border-width: 2px;
   border-color: var(--window-normal);
 
-  padding: 1px 4px 1px 4px;
-
   display: flex;
   flex-direction: column;
 
@@ -109,22 +107,18 @@
   resize: both;
 }
 
+.window .content p {
+  margin: 0px 4px 0px 4px;
+}
+
 .window .content .output {
   white-space: pre-line;
   height: 100%;
 }
 
-.window .content .output p {
-  margin-bottom: 0;
-}
-
 .window .content .output .expanding-console-text {
   line-height: 1em;
   text-wrap-mode: nowrap;
-}
-
-.window .content .input p {
-  margin-bottom: 0;
 }
 
 .window .popup-content {

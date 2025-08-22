@@ -26,7 +26,7 @@ function PortfolioV2() {
       // Make a new pop up window
       setPopUpWindows([
         ...popUpWindows,
-        { title: title, xpos: 100, ypos: 150, width: 800, height: 600 },
+        { title: title, xpos: xpos, ypos: ypos, width: width, height: height },
       ]);
     }
     // TODO: do some kind of alert if the window already exists
