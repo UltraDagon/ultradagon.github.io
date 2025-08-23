@@ -1,4 +1,4 @@
-a, a:link, a:visited, a:active {
+.expanding-console-text a, a:link, a:visited, a:active {
   text-decoration: none;
   color: white;
 }
@@ -9,7 +9,15 @@ a, a:link, a:visited, a:active {
   cursor: pointer;
 }
 
-.popUpLink:hover {
+.expanding-console-text .directory.unlocked:hover {
+  cursor: zoom-in;
+}
+
+.expanding-console-text .directory.locked:hover {
+  cursor: zoom-out;
+}
+
+.pop-up-link:hover {
   text-decoration: underline;
   cursor: pointer;
 }

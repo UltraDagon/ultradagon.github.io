@@ -62,7 +62,6 @@
   
   border-bottom: 2px solid var(--window-normal);
 
-  cursor: move;
   user-select: none;
 }
 
@@ -174,6 +173,14 @@
   50% {opacity: 0;}
   99% {opacity: 0;}
   100% {opacity: 1;}
+}
+
+.grabbed {
+  cursor: grabbing;
+}
+
+.ungrabbed {
+  cursor: grab;
 }
 /* I should move like half of this back to NavWindowBox for navwindow specific parts (headers, content, etc) */
 

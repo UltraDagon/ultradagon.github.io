@@ -9,6 +9,7 @@ interface Props {
 
 function ExpandingConsoleText(props: Props) {
   const [expanding, setExpanding] = useState(false);
+  const [lockedOpen, setLockedOpen] = useState(false);
   const [childrenText, setChildrenText] = useState(<p></p>);
   const [childrenCount, setChildrenCount] = useState(0);
 
@@ -17,10 +18,10 @@ function ExpandingConsoleText(props: Props) {
     let interval = 0;
 
     interval = setInterval(() => {
-      if (expanding && childrenCount < props.children.length) {
+      if ((lockedOpen || expanding) && childrenCount < props.children.length) {
         setChildrenCount(childrenCount + 1);
       }
-      if (!expanding && childrenCount > 0) {
+      if (!lockedOpen && !expanding && childrenCount > 0) {
         setChildrenCount(childrenCount - 1);
       }
 
@@ -38,15 +39,22 @@ function ExpandingConsoleText(props: Props) {
     setExpanding(false);
   }
 
+  function InvertLock() {
+    setLockedOpen(!lockedOpen);
+  }
+
   return (
     <div
       className="expanding-console-text"
       onMouseOver={Expand}
       onMouseOut={Contract}
     >
-      <p>
+      <p
+        className={"directory " + (lockedOpen ? "" : "un") + "locked"}
+        onClick={InvertLock}
+      >
         {props.head}
-        {expanding ? "/" : "\\"}
+        {expanding || lockedOpen ? "/" : "\\"}
       </p>
       {childrenText}
     </div>

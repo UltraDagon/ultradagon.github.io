@@ -75,7 +75,11 @@ function NavWindowBox(props: Props) {
         "--height": props.height + "px",
       }}
     >
-      <div className="header" onMouseDown={Grab} onMouseUp={Release}>
+      <div
+        className={"header " + (grabbed ? "" : "un") + "grabbed"}
+        onMouseDown={Grab}
+        onMouseUp={Release}
+      >
         <p>[C:\] C:\WINDOWS\system32\cmd.exe</p>
       </div>
       <div className="content">
@@ -117,17 +121,17 @@ function NavWindowBox(props: Props) {
                 onClick={() => clickPopUpLink("Poppy's Scuttle Slugging")}
               >
                 |--{">"}{" "}
-                <span className="popUpLink">Poppy's_Scuttle_Slugging</span>
+                <span className="pop-up-link">Poppy's_Scuttle_Slugging</span>
               </p>,
               <p
                 key={2}
                 onClick={() => clickPopUpLink("Operating Standards Project")}
               >
                 |--{">"}{" "}
-                <span className="popUpLink">Operating_Standards_Project</span>
+                <span className="pop-up-link">Operating_Standards_Project</span>
               </p>,
               <p key={3} onClick={() => clickPopUpLink("Portfolio Website")}>
-                |--{">"} <span className="popUpLink">Portfolio_Website</span>
+                |--{">"} <span className="pop-up-link">Portfolio_Website</span>
               </p>,
               <p key={4}>|--{">"} No_More_Twitter_Blue</p>,
               <p key={5}>`--{">"} FIRST_Robotics_Scouting_App</p>,
