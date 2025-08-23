@@ -76,6 +76,9 @@ function PopUpWindow(props: Props) {
       if (grabbed) {
         setXpos(xpos + mousePosition.x - mouseOldPosition.x);
         setYpos(ypos + mousePosition.y - mouseOldPosition.y);
+      } else {
+        if (ypos < 0) setYpos(0);
+        if (xpos < 0) setXpos(0);
       }
 
       setOldMousePosition(mousePosition);
@@ -97,8 +100,8 @@ function PopUpWindow(props: Props) {
     <div
       className="window"
       style={{
-        "--xpos": xpos + "px",
-        "--ypos": ypos + "px",
+        "--xpos": (xpos > 0 ? xpos : 0) + "px",
+        "--ypos": (ypos > 0 ? ypos : 0) + "px",
         "--width": props.width + "px",
         "--height": props.height + "px",
       }}

@@ -14,6 +14,13 @@ function Home() {
   return (
     <>
       <div className="main-container">
+        <h2>
+          Important! See{" "}
+          <Link className="default-link" to="/portfoliov2">
+            Portfolio V2
+          </Link>{" "}
+          if you're concerned about the website looking wonky!
+        </h2>
         <h1>Hey! I'm Dagon</h1>
         <p>
           I'm a 21-year-old college student studying Computer Science at

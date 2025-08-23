@@ -20,6 +20,11 @@
 
 /*This is taken out for the moment so v1 works properly*/
 
+.intro-text {
+  color: white;
+  font-family: "Poppins";
+}
+
 .window {
   position: absolute;
   margin-left: var(--xpos);
@@ -90,11 +95,6 @@
   font-family: WindowsCommandPrompt, monospace;
 
   background-color: black;
-
-  outline-style: solid;
-  outline-width: 0px;
-  outline-offset: -2px;
-  outline-color: var(--window-normal);
   
   border-style: inset;
   border-width: 2px;

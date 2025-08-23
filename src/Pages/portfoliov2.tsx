@@ -43,10 +43,17 @@ function PortfolioV2() {
 
   return (
     <>
-      <p className="test">Hello World!</p>
+      <h1 className="intro-text">
+        Hello! This page is currently under development, but will be the general
+        layout of my portfolio in the near future!
+      </h1>
+      <h2 className="intro-text">
+        Also, the website's css in general is a bit messed up currently, but
+        that won't be an issue once V2 is done.
+      </h2>
       <NavWindowBox
         xpos={40}
-        ypos={100}
+        ypos={50}
         width={800}
         height={600}
         onClickPopUp={createPopUp}
