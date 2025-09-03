@@ -110,6 +110,15 @@
   margin: 0px 4px 0px 4px;
 }
 
+.window .content h1 {
+  margin: 1em 4px 0px 4px;
+  align-self: center;
+}
+
+.window .content h3 {
+  margin: 1em 4px 0px 4px;
+}
+
 .window .content .output {
   white-space: pre-line;
   height: 100%;
@@ -125,10 +134,14 @@
   min-height: 0;
 }
 
+.window .popup-content p {
+  margin: 1em 4px 0px 4px;
+}
+
 .window .popup-content .github-link {
   font-size: 1.25em;
   text-align: center;
-  margin-top: 0.5em;
+  margin: 0.5em 0px 0px 0px;
 }
 
 .window .popup-content a {
