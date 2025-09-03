@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import windowsxpPng from "../assets/windowsxp.png";
 
 declare module "react" {
   interface CSSProperties {
@@ -223,6 +224,27 @@ const popupContent = new Map([
       >
         View on GitHub!
       </a>
+      <p>
+        This website you're on right now is my portfolio website! It's made in
+        TypeScript using React with Vite, and I had a blast writing my own css
+        instead of sticking with a framework.
+      </p>
+      <p className="right">
+        <img src={windowsxpPng} className="left" />
+        The current version is loosely based on Windows XP, which was the first
+        operating system I used as a kid. It's been a lot more fun to make than
+        a traditional website, which is what I went for in my first version. As
+        of now, I'm not sure if I'm going to stick with github pages as the host
+        or switch to a dynamically hosted website.
+      </p>
+      <p className="left">
+        <img src={windowsxpPng} className="right" />
+        The current version is loosely based on Windows XP, which was the first
+        operating system I used as a kid. It's been a lot more fun to make than
+        a traditional website, which is what I went for in my first version. As
+        of now, I'm not sure if I'm going to stick with github pages as the host
+        or switch to a dynamically hosted website.
+      </p>
     </div>,
   ],
 ]);
