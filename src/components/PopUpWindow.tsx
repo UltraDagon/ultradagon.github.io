@@ -27,9 +27,28 @@ const popupContent = new Map([
       >
         View on GitHub!
       </a>
+      <p className="left">
+        <iframe
+          src="https://www.youtube.com/embed/LV4iFOz3Xek"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Embedded youtube"
+        />
+        "Operating Standards Update" is a Google Apps Script program used to
+        transfer data from meeting minutes taken on a Google Doc into a Google
+        Sheet. I made it for my college fraternity, Lambda Chi Alpha. It saves
+        roughly 15 hours of human labor a semester, and has had no bug
+        encounters since its completion in spring 2024. During it's production,
+        I would check in with the president and operating standards chair about
+        once every two weeks to update them on it's progress.
+      </p>
       <p>
-        "Operating Standards Update" is a tool used to transfer data from
-        meeting minutes taken on a Google Doc into a Google Sheet.
+        Operating Standards Update reads through a given Google Doc and writes
+        to a given Google Sheet, filling in the information for the date on the
+        doc. Currently it looks for bonus standards and merits. Bonus standards
+        are points used to determine things like room pick, parking spaces,
+        etc., and merits are used to ensure people are held accountable for
+        their responsibilites.
       </p>
     </div>,
   ],
@@ -229,19 +248,11 @@ const popupContent = new Map([
         TypeScript using React with Vite, and I had a blast writing my own css
         instead of sticking with a framework.
       </p>
-      <p className="right">
-        <img src={windowsxpPng} className="left" />
-        The current version is loosely based on Windows XP, which was the first
-        operating system I used as a kid. It's been a lot more fun to make than
-        a traditional website, which is what I went for in my first version. As
-        of now, I'm not sure if I'm going to stick with github pages as the host
-        or switch to a dynamically hosted website.
-      </p>
       <p className="left">
-        <img src={windowsxpPng} className="right" />
+        <img src={windowsxpPng} />
         The current version is loosely based on Windows XP, which was the first
         operating system I used as a kid. It's been a lot more fun to make than
-        a traditional website, which is what I went for in my first version. As
+        a traditional website, which was what I went for in my first version. As
         of now, I'm not sure if I'm going to stick with github pages as the host
         or switch to a dynamically hosted website.
       </p>
@@ -255,13 +266,14 @@ function PopUpWindow(props: Props) {
   const [grabbed, setGrabbed] = useState(false);
   const [xpos, setXpos] = useState(props.xpos);
   const [ypos, setYpos] = useState(props.ypos);
+  const [maximized, setMaximized] = useState(false);
 
   // Allows the window to be movable
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
 
-      if (grabbed) {
+      if (grabbed && !maximized) {
         setXpos(xpos + mousePosition.x - mouseOldPosition.x);
         setYpos(ypos + mousePosition.y - mouseOldPosition.y);
       } else {
@@ -284,14 +296,30 @@ function PopUpWindow(props: Props) {
     setGrabbed(false);
   }
 
+  function onClickMaximizeWindow() {
+    setMaximized(!maximized);
+  }
+
+  let finalXpos = xpos > 0 ? xpos : 0;
+  let finalYpos = ypos > 0 ? ypos : 0;
+  let finalWidth: string | number = props.width + "px";
+  let finalHeight: string | number = props.height + "px";
+
+  if (maximized) {
+    finalXpos = 0;
+    finalYpos = 0;
+    finalWidth = document.documentElement.clientWidth - 16 + "px";
+    finalHeight = "100vh";
+  }
+
   return (
     <div
-      className="window"
+      className={"window"}
       style={{
-        "--xpos": (xpos > 0 ? xpos : 0) + "px",
-        "--ypos": (ypos > 0 ? ypos : 0) + "px",
-        "--width": props.width + "px",
-        "--height": props.height + "px",
+        "--xpos": finalXpos + "px",
+        "--ypos": finalYpos + "px",
+        "--width": finalWidth,
+        "--height": finalHeight,
       }}
     >
       <div
@@ -307,8 +335,10 @@ function PopUpWindow(props: Props) {
           >
             &#128473;
           </button>
-          <button>&#128470;</button>
-          <button>&#128469;</button>
+          <button onClick={() => onClickMaximizeWindow()}>&#128470;</button>
+          <button onClick={() => props.onClickCloseWindow(props.title)}>
+            &#128469;
+          </button>
         </p>
       </div>
       {popupContent.get(props.title)}

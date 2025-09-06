@@ -85,6 +85,8 @@
   margin: 1px 2px 1px 3px;
 }
 
+
+
 .window .content {
   width: var(--width);
   height: var(--height);
@@ -178,14 +180,29 @@
   width: 50%;
 }
 
+.window .popup-content iframe {
+  width: 50%;
+  aspect-ratio: 16/9;
+}
+
 .window .popup-content .left {
   float: left;
   text-align: left;
 }
 
+.window .popup-content .left img, .window .popup-content .left iframe {
+  margin-left: 0.25em;
+  float: right;
+}
+
 .window .popup-content .right {
   float: right;
   text-align: right;
+}
+
+.window .popup-content .right img, .window .popup-content .right iframe {
+  margin-right: 0.25em;
+  float: left;
 }
 
 .blink {
