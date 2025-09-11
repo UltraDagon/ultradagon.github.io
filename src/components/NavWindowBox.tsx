@@ -133,8 +133,24 @@ function NavWindowBox(props: Props) {
               <p key={3} onClick={() => clickPopUpLink("Portfolio Website")}>
                 |--{">"} <span className="pop-up-link">Portfolio_Website</span>
               </p>,
-              <p key={4}>|--{">"} No_More_Twitter_Blue</p>,
-              <p key={5}>`--{">"} FIRST_Robotics_Scouting_App</p>,
+              <p key={4} onClick={() => clickPopUpLink("No More Twitter Blue")}>
+                |--{">"}{" "}
+                <span className="pop-up-link">No_More_Twitter_Blue</span>
+              </p>,
+              <p
+                key={5}
+                onClick={() => clickPopUpLink("FIRST Robotics Scouting App")}
+              >
+                `--{">"}{" "}
+                <span className="pop-up-link">FIRST_Robotics_Scouting_App</span>
+              </p>,
+              <p
+                key={6}
+                onClick={() => clickPopUpLink("Future's Market Banking")}
+              >
+                `--{">"}{" "}
+                <span className="pop-up-link">Futures_Market_Banking</span>
+              </p>,
             ]}
           />
           <br />

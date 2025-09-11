@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./layout";
 import Home from "./Pages/home";
 import About from "./Pages/about";
@@ -14,12 +14,15 @@ function App() {
     <HashRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<PortfolioV2 />} />
+          <Route path="/old-home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/current-projects" element={<CurrentProjects />} />
           <Route path="/all-projects" element={<AllProjects />} />
-          <Route path="/portfoliov2" element={<PortfolioV2 />} />
+
+          {/* in case of invalid route, return to home page */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </HashRouter>

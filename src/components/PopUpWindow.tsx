@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import windowsxpPng from "../assets/windowsxp.png";
+import scoutingappPng from "../assets/scoutingapp.png";
 
 declare module "react" {
   interface CSSProperties {
@@ -16,6 +17,7 @@ interface Props {
   onClickCloseWindow: Function;
 }
 
+// This probably isn't a great way to do this, maybe I should have them all as their own individual modules?
 const popupContent = new Map([
   [
     "Operating Standards Project",
@@ -23,7 +25,7 @@ const popupContent = new Map([
       <a
         href="https://github.com/UltraDagon/ultradagon.github.io"
         target="_blank"
-        className="github-link"
+        className="header-link"
       >
         View on GitHub!
       </a>
@@ -58,7 +60,7 @@ const popupContent = new Map([
       <a
         href="https://github.com/UltraDagon/PoppysScuttleSlugging"
         target="_blank"
-        className="github-link"
+        className="header-link"
       >
         View on GitHub!
       </a>
@@ -239,7 +241,7 @@ const popupContent = new Map([
       <a
         href="https://github.com/UltraDagon/ultradagon.github.io"
         target="_blank"
-        className="github-link"
+        className="header-link"
       >
         View on GitHub!
       </a>
@@ -255,6 +257,84 @@ const popupContent = new Map([
         a traditional website, which was what I went for in my first version. As
         of now, I'm not sure if I'm going to stick with github pages as the host
         or switch to a dynamically hosted website.
+      </p>
+      <p>As of now, you're still able to navigate the old website</p>
+    </div>,
+  ],
+  [
+    "No More Twitter Blue",
+    <div className="content popup-content">
+      <a
+        href="https://github.com/UltraDagon/NoMoreTwitterBlue"
+        target="_blank"
+        className="header-link"
+      >
+        View on GitHub!
+      </a>
+      <p>
+        No More Twitter Blue is a Google Chrome extension that removes posts
+        from Twitter Blue (X Premium) users from your feed. It was made for a
+        friend who was annoyed with how flooded his feed was with posts from
+        blue checkmark accounts, and so I made a fix.
+      </p>
+    </div>,
+  ],
+  [
+    "FIRST Robotics Scouting App",
+    <div className="content popup-content">
+      <span className="header-link">
+        <a href="https://github.com/rr1706/Scouting-2020" target="_blank">
+          View on GitHub!
+        </a>
+        <a
+          href="https://docs.google.com/presentation/d/18Bd_IN4WU5ClfvS3NTWvgwj77zyrOeAJPGrfPlbPnOg/edit?usp=sharing"
+          target="_blank"
+        >
+          View demo slides!
+        </a>
+      </span>
+      <p className="left">
+        In highschool, I made this scouting app in Java for FIRST Robotics team
+        1706, the Ratchet Rockers. This app's success led to me overseeing
+        future scouting app development until my graduation in 2022. The app's
+        purpose is to record information about other teams competing in the
+        FIRST Robotics Competitions. Users would record stats like speed, points
+        earned, different objective capabilities, if they won, and more.
+      </p>
+      <p>
+        FIRST Robotics Competitions are split into two match phases. The first
+        being qualification matches, where all 3 robots on a team would gain
+        points based on how they performed during a match. The second phase is
+        the playoffs, where the top 8 scoring teams would become alliance
+        captains, and have to choose two teams each to be part of their
+        alliance. Knowing which teams were strong or would synergize with your
+        team was crucial information needed if you want a better chance at
+        winning.
+      </p>
+      <p>
+        After a qualification match finishes, the data recorded by the scouting
+        app is sent to a spreadsheet. The spreadsheet would take this
+        information, and rank the teams based on how much we would want them to
+        join our alliance, whether we were an alliance captain or in the case
+        that we needed to help our alliance captains choose another ally.
+      </p>
+    </div>,
+  ],
+  [
+    "No More Twitter Blue",
+    <div className="content popup-content">
+      <a
+        href="https://github.com/UltraDagon/NoMoreTwitterBlue"
+        target="_blank"
+        className="header-link"
+      >
+        View on GitHub!
+      </a>
+      <p>
+        No More Twitter Blue is a Google Chrome extension that removes posts
+        from Twitter Blue (X Premium) users from your feed. It was made for a
+        friend who was annoyed with how flooded his feed was with posts from
+        blue checkmark accounts, and so I made a fix.
       </p>
     </div>,
   ],

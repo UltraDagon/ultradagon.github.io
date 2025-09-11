@@ -1,7 +1,7 @@
 .nav-container {
   position: sticky;
   top: 0;
-  padding: 1em 2em 1em 2em;
+  padding: 1em 2em 2em 2em;
   display: inline-flex;
   width: 100%;
   background-image: linear-gradient(to top, rgba(30, 0, 62, 0.75), rgba(15, 108, 158, 0.75));
@@ -11,6 +11,7 @@
 .site-title {
   top: 0;
   height: 2em;
+  min-height: 2em;
   width: 20em;
   color: wheat;
 }

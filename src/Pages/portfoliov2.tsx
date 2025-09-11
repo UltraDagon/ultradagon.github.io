@@ -2,7 +2,7 @@ import NavWindowBox from "../components/NavWindowBox";
 import PopUpWindow from "../components/PopUpWindow";
 import "./portfoliov2.css";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 function PortfolioV2() {
@@ -45,7 +45,7 @@ function PortfolioV2() {
     <>
       <NavWindowBox
         xpos={40}
-        ypos={300}
+        ypos={50}
         width={800}
         height={600}
         onClickPopUp={createPopUp}
@@ -61,7 +61,7 @@ function PortfolioV2() {
           onClickCloseWindow={removePopUp}
         />
       ))}
-      <h1 className="intro-text">
+      {/*<h1 className="intro-text">
         Hello! This page is currently under development, but will be the general
         layout of my portfolio in the near future!
       </h1>
@@ -72,7 +72,7 @@ function PortfolioV2() {
       <h2 className="intro-text">
         Right now it isn't super apparent, but you're able to drag the windows
         around from the top and scale them from the bottom right corner.
-      </h2>
+      </h2>*/}
     </>
   );
 }

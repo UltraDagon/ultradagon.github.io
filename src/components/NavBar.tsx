@@ -7,12 +7,12 @@ import "./NavBar.css";
 
 function NavBar() {
   const items = [
-    ["Home", "/"],
+    ["Old Home", "/old-home"],
     /*"About",
     "Blog",
     "Current Projects",*/
+    ["Portfolio V2", "/"],
     ["All Projects", "/all-projects"],
-    ["Portfolio V2", "/portfoliov2"],
   ].reverse();
   /*const links = [
     "/",
@@ -40,7 +40,7 @@ function NavBar() {
   }, [location]);
 
   return (
-    <div className="nav-container">
+    <div id="nav-bar" className="nav-container">
       <div className="site-title">
         <SiteTitle />
       </div>

@@ -15,11 +15,9 @@ function Home() {
     <>
       <div className="main-container">
         <h2>
-          Important! See{" "}
-          <Link className="default-link" to="/portfoliov2">
-            Portfolio V2
-          </Link>{" "}
-          if you're concerned about the website looking wonky!
+          This version of the website used to use the bootstrap framework, which
+          is no longer installed. That's why some of the css looks a little
+          wonky.
         </h2>
         <h1>Hey! I'm Dagon</h1>
         <p>

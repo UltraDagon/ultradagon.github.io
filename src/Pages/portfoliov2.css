@@ -9,27 +9,19 @@
   src: url(../assets/Windows-Command-Prompt.woff);
 }
 
-/*body {
-  background-image: url("../assets/windowsxp.jpg");
-  background-size: cover;
-  background-position: bottom;
-
-  overflow-y: hidden;
-  overflow-x: hidden;
-}*/
-
-/*This is taken out for the moment so v1 works properly*/
-
 .intro-text {
   color: white;
   font-family: "Poppins";
+  background-color: rgba(0,0,0,0.5);
+  width: fit-content;
+  margin-top: 0;
 }
 
 .window {
   position: absolute;
   margin-left: var(--xpos);
   margin-top: var(--ypos);
-  /*height: auto;*/
+  padding: 0 0 0 0;
   width: fit-content;
   min-width: max-content;
 
@@ -140,10 +132,12 @@
   margin: 1em 4px 0px 4px;
 }
 
-.window .popup-content .github-link {
+.window .popup-content .header-link {
+  display: flex;
   font-size: 1.25em;
   text-align: center;
   margin: 0.5em 0px 0px 0px;
+  justify-content: space-evenly;
 }
 
 .window .popup-content a {
