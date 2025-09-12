@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import windowsxpPng from "../assets/windowsxp.png";
 import scoutingappPng from "../assets/scoutingapp.png";
+import resizeWindowPng from "../assets/resize-window.png";
+import expandingTextPng from "../assets/expanding-text.png";
+import moveWindowPng from "../assets/move-window.png";
+import hoverLinkPng from "../assets/hover-link.png";
+import hoverButtonPng from "../assets/hover-button.png";
 
 declare module "react" {
   interface CSSProperties {
@@ -258,7 +265,15 @@ const popupContent = new Map([
         of now, I'm not sure if I'm going to stick with github pages as the host
         or switch to a dynamically hosted website.
       </p>
-      <p>As of now, you're still able to navigate the old website</p>
+      <p>
+        As of now, you're still able to navigate the{" "}
+        <Link to="/old-home">old portfolio</Link>, though it doesn't look{" "}
+        <i>exactly</i> how it used to due to me removing{" "}
+        <a href="https://getbootstrap.com/" target="_blank">
+          bootstrap
+        </a>
+        .
+      </p>
     </div>,
   ],
   [
@@ -338,6 +353,36 @@ const popupContent = new Map([
       </p>
     </div>,
   ],
+  [
+    "How To Use",
+    <div className="content popup-content">
+      <p className="left">
+        <img className="bordered" src={expandingTextPng} />
+        Hover over text with "\" to the right to expand the menu. Click that
+        text to enable/disable it being always expanded.
+      </p>
+      <p className="right">
+        <img className="bordered" src={moveWindowPng} />
+        Grab the top bar of windows to drag them around and change their
+        position.
+      </p>
+      <p className="left">
+        <img className="bordered" src={hoverLinkPng} />
+        Click on the text that is underlined upon hover to open the website or
+        pop-up window associated with it.
+      </p>
+      <p className="right">
+        <img className="bordered" src={resizeWindowPng} />
+        Resize the windows by clicking and dragging the bottom right of the
+        window.
+      </p>
+      <p className="left">
+        <img className="bordered" src={hoverButtonPng} />
+        You can click the buttons at the top right of the pop-up windows to
+        close/expand the window.
+      </p>
+    </div>,
+  ],
 ]);
 
 function PopUpWindow(props: Props) {
@@ -394,7 +439,7 @@ function PopUpWindow(props: Props) {
 
   return (
     <div
-      className={"window"}
+      className={"window" + (maximized ? " maximized" : "")}
       style={{
         "--xpos": finalXpos + "px",
         "--ypos": finalYpos + "px",

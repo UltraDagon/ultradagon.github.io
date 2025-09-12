@@ -23,6 +23,7 @@ function NavWindowBox(props: Props) {
   const [grabbed, setGrabbed] = useState(false);
   const [xpos, setXpos] = useState(props.xpos);
   const [ypos, setYpos] = useState(props.ypos);
+  const [tutorialFinished, setTutorialFinished] = useState(false);
 
   // Allows the window to be movable
   useEffect(() => {
@@ -56,6 +57,7 @@ function NavWindowBox(props: Props) {
     let parentWindow = document.getElementById("nav-window-output");
     let width = 800;
     let height = 600;
+    setTutorialFinished(true);
 
     if (parentWindow != null) {
       width = parentWindow.clientWidth;
@@ -85,10 +87,17 @@ function NavWindowBox(props: Props) {
       <div className="content">
         <div id="nav-window-output" className="output">
           <p>
-            C:\{">"}dir /b{"\n\n"}
+            C:\WINDOWS\system32{">"}dir /b{"\n\n"}
           </p>
-          <p>C:\ (Home)</p>
-          <p>..\ (Go Back){"\n\n"}</p>
+          <p>
+            <span
+              className={"pop-up-link" + (tutorialFinished ? "" : " tutorial")}
+              onClick={() => clickPopUpLink("How To Use")}
+            >
+              how_to_use {tutorialFinished ? "" : "(click here)"}
+            </span>
+            {"\n\n"}
+          </p>
           <p>about_me</p>
           <ExpandingConsoleText
             head={"socials"}
@@ -141,7 +150,7 @@ function NavWindowBox(props: Props) {
                 key={5}
                 onClick={() => clickPopUpLink("FIRST Robotics Scouting App")}
               >
-                `--{">"}{" "}
+                |--{">"}{" "}
                 <span className="pop-up-link">FIRST_Robotics_Scouting_App</span>
               </p>,
               <p
@@ -157,8 +166,7 @@ function NavWindowBox(props: Props) {
         </div>
         <div className="input">
           <p>
-            C:\WINDOWS\system32{">"}
-            <span className="blink">_</span>
+            C:\WINDOWS\system32{">"}start <span className="blink">_</span>
           </p>
         </div>
       </div>

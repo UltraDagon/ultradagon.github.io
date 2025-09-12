@@ -77,8 +77,6 @@
   margin: 1px 2px 1px 3px;
 }
 
-
-
 .window .content {
   width: var(--width);
   height: var(--height);
@@ -100,6 +98,12 @@
   resize: both;
 }
 
+.window.maximized .content {
+  resize: none;
+  min-width: var(--width);
+  min-height: var(--height);
+}
+
 .window .content p {
   margin: 0px 4px 0px 4px;
 }
@@ -113,6 +117,23 @@
   margin: 1em 4px 0px 4px;
 }
 
+.window .content .tutorial {
+  color: transparent;
+  text-decoration: underline yellow;
+
+  background: linear-gradient(
+    90deg,
+    rgb(127,255,127),
+    yellow,
+    rgb(127,255,127)
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: gradientanimation 2s linear infinite;
+}
+
 .window .content .output {
   white-space: pre-line;
   height: 100%;
@@ -121,6 +142,11 @@
 .window .content .output .expanding-console-text {
   line-height: 1em;
   text-wrap-mode: nowrap;
+}
+
+.window .content img.bordered {
+  border-style: ridge;
+  border-color: var(--window-normal);
 }
 
 .window .popup-content {
@@ -161,15 +187,6 @@
   animation: gradientanimation 2s linear infinite;
 }
 
-@keyframes gradientanimation {
-  0% {
-    background-position: 200% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .window .popup-content img {
   width: 50%;
 }
@@ -191,7 +208,7 @@
 
 .window .popup-content .right {
   float: right;
-  text-align: right;
+  text-align: left;
 }
 
 .window .popup-content .right img, .window .popup-content .right iframe {
@@ -206,19 +223,28 @@
   opacity: 1;
 }
 
-@keyframes blink {
-  49% {opacity: 1;}
-  50% {opacity: 0;}
-  99% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
 .grabbed {
   cursor: grabbing;
 }
 
 .ungrabbed {
   cursor: grab;
+}
+
+@keyframes gradientanimation {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes blink {
+  49% {opacity: 1;}
+  50% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
 }
 /* I should move like half of this back to NavWindowBox for navwindow specific parts (headers, content, etc) */
 
