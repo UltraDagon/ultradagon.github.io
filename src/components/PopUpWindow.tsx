@@ -237,7 +237,16 @@ const popupContent = new Map([
         do better.
       </p>
       <h3>AI Avoidance:</h3>
-      <p></p>
+      <p>
+        tl ; dr - I avoided using any AI assistance while developing Poppy's
+        Scuttle Slugging as I took this project on to learn.
+      </p>
+      <p>
+        I think AI is a really cool thing, but I don't want to abuse it as a
+        substitute for learning, in the same way you wouldn't bring a gun to a
+        martial arts competition and deem yourself the winner since you're the
+        best at fighting.
+      </p>
       <h3>Code Structure:</h3>
       <h3>What I learned:</h3>
     </div>,
@@ -383,6 +392,26 @@ const popupContent = new Map([
       </p>
     </div>,
   ],
+  [
+    "About Me",
+    <div className="content popup-content">
+      <p>
+        Hello! My name's Dagon, and I'm currently a senior studying computer
+        science with minors in mathematics and computer engineering.
+      </p>
+      <p>
+        Programming, especially making games, is my favorite hobby and im super
+        passionate about it. My favorite language is by far C++, though I like
+        Python for leetcode and Typescript for webdev. I'm currently putting the
+        finishing touches on Poppy's Scuttle Slugging, and I plan on diving into
+        Unreal Engine right after.
+      </p>
+      <p>
+        Some of my other hobbies include playing video games, papercrafting, and
+        hanging out with friends.
+      </p>
+    </div>,
+  ],
 ]);
 
 function PopUpWindow(props: Props) {
@@ -434,7 +463,7 @@ function PopUpWindow(props: Props) {
     finalXpos = 0;
     finalYpos = 0;
     finalWidth = document.documentElement.clientWidth - 16 + "px";
-    finalHeight = "100vh";
+    finalHeight = "calc(100vh - 2em - 1px)";
   }
 
   return (

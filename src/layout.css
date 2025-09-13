@@ -7,6 +7,7 @@ body {
 body.body-v2 {
   background-image: url("assets/windowsxpbackground.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position-y: 0;
+  background-position-x: 0;
   background-repeat: repeat;
 }

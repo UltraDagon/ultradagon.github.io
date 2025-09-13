@@ -98,7 +98,9 @@ function NavWindowBox(props: Props) {
             </span>
             {"\n\n"}
           </p>
-          <p>about_me</p>
+          <p className="pop-up-link" onClick={() => clickPopUpLink("About Me")}>
+            about_me
+          </p>
           <ExpandingConsoleText
             head={"socials"}
             children={[
