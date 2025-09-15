@@ -103,10 +103,10 @@ const popupContent = new Map([
       </p>
       <p>
         I initially paced myself while working on it, where the first month and
-        a half I would make sure I pushed a feature every other day. This way I
-        would avoid burnout, while figuring out a realistic set of features
+        a half I would make sure I pushed a feature every other day. This way, I
+        would avoid burnout while figuring out a realistic set of features
         needed for the end product. I feel like this was a good decision, though
-        when I take on another project like this, I think I'll try and fully
+        when I take on another project like this, I think I'll try to fully
         design the demo before writing any of the code.
       </p>
       <p>
@@ -119,16 +119,16 @@ const popupContent = new Map([
         time required to implement each one.
       </p>
       <p>
-        As I worked on these features, I'd set myself about a weeks deadline to
+        As I worked on these features, I'd set myself about a week's deadline to
         finish everything on the list. While I missed those smaller deadlines,
         it gave me the motivation to finish more than what was really needed,
-        giving me more time to ensure the game was to a quality that I was happy
+        giving me more time to ensure the game was of a quality that I was happy
         with.
       </p>
       <p>
         In the end, I did have to scrap a few features from the demo, but I'd
         like to work on this more in the future whenever I have the time. As for
-        time management, I feel like my system worked pretty well and was able
+        time management, I feel like my system worked pretty well and I was able
         to be motivated to consistently work on the game without getting bored
         or burnt out. If I were to do this project again, I would definitely map
         out the features more clearly, likely using some sort of flow chart to
@@ -139,11 +139,11 @@ const popupContent = new Map([
       <p>
         tl ; dr - I have very little experience with art, and it was the most
         difficult part of this project. I felt like I was able to lower my
-        standard of perfection a bit, and learned how to create better digital
+        standard of perfection a bit and learned how to create better digital
         art.
       </p>
       <p>
-        Before this project, my experience with digital art summed up to a few
+        Before this project, my experience with digital art amounted to a few
         environment sprites and a golf ball for a game jam that I did with some
         buddies last year. My experience with handmade art didn't go much past
         that, though I would say that I'm good at seeing and copying the lines I
@@ -152,7 +152,7 @@ const popupContent = new Map([
       <p>
         While it did scare me, I wanted to get better at art, so why not get
         better now? I didn't want to paint digitally, so I would split all
-        sprites into many single color layers, and then put lighting and shadows
+        sprites into many single-color layers, and then put lighting and shadows
         on their own layers at a lowered opacity.
       </p>
       <p>
@@ -170,7 +170,7 @@ const popupContent = new Map([
         Poppy. This piece would be seen every run, had 4 distinct frames, and
         had to be detailed. With how detailed this had to be, the perfectionist
         in me had to make sure it looked how I wanted, though I knew that I did
-        not have the art fundamentals to make a proportially correct body yet.
+        not have the art fundamentals to make a proportionally correct body yet.
       </p>
       <p>
         After much longer than it should have taken, I was able to finish all of
@@ -185,8 +185,8 @@ const popupContent = new Map([
       <p>
         tl ; dr - I had slow fps midway into development. I was able to solve a
         problem without an obvious solution by making two caches instead of one,
-        and as a result I didn't have to worry about performance for the rest of
-        development.
+        and as a result, I didn't have to worry about performance for the rest
+        of development.
       </p>
       <p>
         In high school, I was used to making games with Python, so I had quite a
@@ -196,7 +196,7 @@ const popupContent = new Map([
       </p>
       <p>
         At least that's what I thought. Pretty early on, I was dropping to 40fps
-        while drawing 5-10 sprites onto the screen, with. If I was going to be
+        while drawing 5-10 sprites onto the screen, with. If I were going to be
         drawing enemies and moving backgrounds, something had to change. I just
         had no idea what could have been causing these frame drops.
       </p>
@@ -215,7 +215,7 @@ const popupContent = new Map([
         I looked up how other people made SDL2 demos, how multithreading would
         work with SDL2, and general "why is my SDL2 game running slow"
         questions, leading to little progress. Eventually, I found one post
-        saying that someone's game was running slow because they were deleting
+        saying that someone's game was running slowly because they were deleting
         their SDL_Surface every frame, and recreating it from the image every
         frame.
       </p>
@@ -230,7 +230,7 @@ const popupContent = new Map([
       </p>
       <p>
         This felt amazing. I was able to solve an important problem without
-        having the answer handed to me, and as a result I didn't have to worry
+        having the answer handed to me, and as a result, I didn't have to worry
         about performance for the rest of development. In the future I know I'll
         never make this mistake again, and knowing it's possible to optimize my
         games to run this well will help quell the doubt of whether or not I can
@@ -248,7 +248,39 @@ const popupContent = new Map([
         best at fighting.
       </p>
       <h3>Code Structure:</h3>
+      <p>
+        During the development of this project, it was a goal of mine to write
+        code that was readable, maintainable, and efficient. This meant getting
+        rid of my old bad habits to create arbitrary 'temp' variables, or using
+        'magic numbers' that have no explanation behind them and just work.
+      </p>
+      <p>
+        One way I accomplished this was by documenting my header files as I
+        went, which was a total lifesaver later into production as I'd forget
+        some of my older thought processes.
+      </p>
+      <p>
+        I know for a fact that I would have had to backtrack a lot if I had
+        stuck with my old practices, but because of my code structure and
+        documentation I was able to keep all of the functions managed and
+        accurately defined.
+      </p>
       <h3>What I learned:</h3>
+      <p>
+        Looking back on it, I learned a lot more that I thought I would have. I
+        learned about how to effectively use smart pointers, how to document
+        code and not just comment it, how namespaces work, and so much more. I
+        also learned a lot about digital art, and have definitely felt my
+        improvement as I continued to work on the game.
+      </p>
+      <p>
+        One of the most important things that I learned is that I'm able to
+        solve problems that other people haven't solved before (sort of). Though
+        I'm sure someone else has likely solved the same issue I ran into with
+        the frame rate, I wasn't able to find the solution from simply looking
+        it up. I was able to solve it on my own after learning more thoroughly
+        about how objects in SDL2 work, which felt awesome!
+      </p>
     </div>,
   ],
   [
@@ -359,6 +391,26 @@ const popupContent = new Map([
         from Twitter Blue (X Premium) users from your feed. It was made for a
         friend who was annoyed with how flooded his feed was with posts from
         blue checkmark accounts, and so I made a fix.
+      </p>
+    </div>,
+  ],
+  [
+    "Future's Market Banking",
+    <div className="content popup-content">
+      <a
+        href="https://github.com/UltraDagon/FuturesMarketBank"
+        target="_blank"
+        className="header-link"
+      >
+        View on GitHub!
+      </a>
+      <p>
+        Future's Market Banking is a mock banking system I made with a group of
+        two other people as a databases class project. It was written in Python
+        and used a local MySQL server as the database. Some of the features
+        include: Account creation, account login, money deposit, money transfer
+        with message, store browsing, purchasing items from stores, creating
+        store listings, and more!
       </p>
     </div>,
   ],

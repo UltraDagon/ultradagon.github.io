@@ -144,11 +144,6 @@
   text-wrap-mode: nowrap;
 }
 
-.window .content img.bordered {
-  border-style: ridge;
-  border-color: var(--window-normal);
-}
-
 .window .popup-content {
   font-size: 0.8em;
   min-height: 0;
@@ -189,6 +184,12 @@
 
 .window .popup-content img {
   width: 50%;
+}
+
+.window .popup-content img.bordered {
+  width: calc(50% - 8px);
+  border-style: ridge;
+  border-color: var(--window-normal);
 }
 
 .window .popup-content iframe {
