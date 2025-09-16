@@ -61,10 +61,10 @@ function PortfolioV2() {
           onClickCloseWindow={removePopUp}
         />
       ))}
-      <h1 className="intro-text">
+      {/*<h1 className="intro-text">
         Hello! This page is currently under development. Some projects are
         missing images or full descriptions, but I'm actively working on it!
-      </h1>
+      </h1>*/}
     </>
   );
 }

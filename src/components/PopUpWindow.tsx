@@ -8,6 +8,11 @@ import expandingTextPng from "../assets/expanding-text.png";
 import moveWindowPng from "../assets/move-window.png";
 import hoverLinkPng from "../assets/hover-link.png";
 import hoverButtonPng from "../assets/hover-button.png";
+import pssGameplay1Png from "../assets/pss-gameplay1.png";
+import portfoliov1Png from "../assets/portfoliov1.png";
+import lolChampMasteryPng from "../assets/lol-champ-mastery.png";
+import nmtbDemoPng from "../assets/nmtb-demo.png";
+import futuresMarketMainMenuPng from "../assets/futures-market-main-menu.png";
 
 declare module "react" {
   interface CSSProperties {
@@ -71,7 +76,8 @@ const popupContent = new Map([
       >
         View on GitHub!
       </a>
-      <p>
+      <p className="left">
+        <img src={pssGameplay1Png} />
         "Poppy's Scuttle Slugging" is the name of a fan game I made over the
         summer of 2025. It was written with C++ using the SDL2 library for
         graphics, and was inspired by Riot Games's{" "}
@@ -86,7 +92,7 @@ const popupContent = new Map([
       </p>
       <p>
         Over the course of this project, I learned a lot and wanted to talk
-        about the journey a bit.
+        about the challenges that popped up during the journey.
       </p>
       <h1>Challenges</h1>
       <h3>Time management:</h3>
@@ -306,7 +312,8 @@ const popupContent = new Map([
         of now, I'm not sure if I'm going to stick with github pages as the host
         or switch to a dynamically hosted website.
       </p>
-      <p>
+      <p className="right">
+        <img src={portfoliov1Png} />
         As of now, you're still able to navigate the{" "}
         <Link to="/old-home">old portfolio</Link>, though it doesn't look{" "}
         <i>exactly</i> how it used to due to me removing{" "}
@@ -333,6 +340,16 @@ const popupContent = new Map([
         friend who was annoyed with how flooded his feed was with posts from
         blue checkmark accounts, and so I made a fix.
       </p>
+      <p className="left">
+        <img className="bordered" src={nmtbDemoPng} /> In the image to the
+        right, you can see that the post from a user with a blue checkmark has a
+        red background, while the post from a default account has a black
+        (default) background.
+        <br />
+        <br />
+        In this case, the post with the red background would be removed from
+        your feed.
+      </p>
     </div>,
   ],
   [
@@ -350,14 +367,15 @@ const popupContent = new Map([
         </a>
       </span>
       <p className="left">
+        <img className="tall" src={scoutingappPng} />
         In highschool, I made this scouting app in Java for FIRST Robotics team
         1706, the Ratchet Rockers. This app's success led to me overseeing
         future scouting app development until my graduation in 2022. The app's
         purpose is to record information about other teams competing in the
         FIRST Robotics Competitions. Users would record stats like speed, points
         earned, different objective capabilities, if they won, and more.
-      </p>
-      <p>
+        <br />
+        <br />
         FIRST Robotics Competitions are split into two match phases. The first
         being qualification matches, where all 3 robots on a team would gain
         points based on how they performed during a match. The second phase is
@@ -366,31 +384,13 @@ const popupContent = new Map([
         alliance. Knowing which teams were strong or would synergize with your
         team was crucial information needed if you want a better chance at
         winning.
-      </p>
-      <p>
+        <br />
+        <br />
         After a qualification match finishes, the data recorded by the scouting
         app is sent to a spreadsheet. The spreadsheet would take this
         information, and rank the teams based on how much we would want them to
         join our alliance, whether we were an alliance captain or in the case
         that we needed to help our alliance captains choose another ally.
-      </p>
-    </div>,
-  ],
-  [
-    "No More Twitter Blue",
-    <div className="content popup-content">
-      <a
-        href="https://github.com/UltraDagon/NoMoreTwitterBlue"
-        target="_blank"
-        className="header-link"
-      >
-        View on GitHub!
-      </a>
-      <p>
-        No More Twitter Blue is a Google Chrome extension that removes posts
-        from Twitter Blue (X Premium) users from your feed. It was made for a
-        friend who was annoyed with how flooded his feed was with posts from
-        blue checkmark accounts, and so I made a fix.
       </p>
     </div>,
   ],
@@ -404,7 +404,8 @@ const popupContent = new Map([
       >
         View on GitHub!
       </a>
-      <p>
+      <p className="left">
+        <img className="bordered" src={futuresMarketMainMenuPng} />
         Future's Market Banking is a mock banking system I made with a group of
         two other people as a databases class project. It was written in Python
         and used a local MySQL server as the database. Some of the features
@@ -458,9 +459,11 @@ const popupContent = new Map([
         finishing touches on Poppy's Scuttle Slugging, and I plan on diving into
         Unreal Engine right after.
       </p>
-      <p>
-        Some of my other hobbies include playing video games, papercrafting, and
-        hanging out with friends.
+      <p className="left">
+        <img src={lolChampMasteryPng} />I also play a lot of League of Legends
+        during my free time, usually unranked matches with friends. My main
+        champion is Kled and I've achieved master tier in ranked (roughly top
+        0.5% of players) in 2023 (S13-1) and 2025.
       </p>
     </div>,
   ],
