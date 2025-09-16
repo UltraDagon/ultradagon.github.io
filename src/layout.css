@@ -10,4 +10,5 @@ body.body-v2 {
   background-position-y: 0;
   background-position-x: 0;
   background-repeat: repeat;
+  overflow: hidden;
 }
