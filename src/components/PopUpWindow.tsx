@@ -9,6 +9,7 @@ import moveWindowPng from "../assets/move-window.png";
 import hoverLinkPng from "../assets/hover-link.png";
 import hoverButtonPng from "../assets/hover-button.png";
 import pssGameplay1Png from "../assets/pss-gameplay1.png";
+import pssUnfinishedGif from "../assets/pss-unfinished.gif";
 import portfoliov1Png from "../assets/portfoliov1.png";
 import lolChampMasteryPng from "../assets/lol-champ-mastery.png";
 import nmtbDemoPng from "../assets/nmtb-demo.png";
@@ -77,7 +78,7 @@ const popupContent = new Map([
         View on GitHub!
       </a>
       <p className="left">
-        <img src={pssGameplay1Png} />
+        <img className="bordered" src={pssUnfinishedGif} />
         "Poppy's Scuttle Slugging" is the name of a fan game I made over the
         summer of 2025. It was written with C++ using the SDL2 library for
         graphics, and was inspired by Riot Games's{" "}
@@ -89,6 +90,9 @@ const popupContent = new Map([
           Burrito Bison
         </a>
         .
+      </p>
+      <p style={{ textAlign: "right" }}>
+        Unfinished gameplay as of 10/2/2025 ^
       </p>
       <p>
         Over the course of this project, I learned a lot and wanted to talk
