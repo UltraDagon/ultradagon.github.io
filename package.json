@@ -5,7 +5,8 @@
   "homepage": "https://ultradagon.github.io",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build && mkdir .\\dist\\src && xcopy .\\src\\ .\\dist\\src\\ /s",
+    "predeploy-old": "npm run build && mkdir .\\dist\\src && xcopy .\\src\\ .\\dist\\src\\ /s",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
@@ -21,10 +22,10 @@
   "devDependencies": {
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
+    "@vitejs/plugin-react": "^5.1.2",
     "gh-pages": "^6.2.0",
     "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "vite": "^7.3.1"
   },
   "main": "index.js",
   "keywords": [],
