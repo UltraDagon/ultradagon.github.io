@@ -1,0 +1,23 @@
+.expanding-console-text a, a:link, a:visited, a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.expanding-console-text a:hover {
+  text-decoration: underline white;
+  color: white !important;
+  cursor: pointer;
+}
+
+.expanding-console-text .directory.unlocked:hover {
+  cursor: zoom-in;
+}
+
+.expanding-console-text .directory.locked:hover {
+  cursor: zoom-out;
+}
+
+.pop-up-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

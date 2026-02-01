@@ -1,0 +1,47 @@
+.featured-project-container {
+  background-color: #44000040;
+  width: 90%;
+  height: 50vh;
+  border-radius: 32px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #406;
+  filter: drop-shadow(10px 20px 4px #00000080);
+}
+
+.featured-project-container iframe {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  min-width: 50%;
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+}
+
+.featured-project-container h2 {
+  width: 50%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.25em;
+}
+
+.featured-project-container p {
+  width: 50%;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.featured-project-container .technologies {
+  position: absolute;
+  height: 4em;
+  bottom: 1em;
+  left: 1em;
+}
+
+.featured-project-container .technologies img {
+  margin-right: 1em;
+  width: 4em;
+  height: 4em;
+}

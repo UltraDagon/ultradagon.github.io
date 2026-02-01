@@ -1,0 +1,257 @@
+:root {
+  --window-light: rgb(255, 255, 255);
+  --window-normal: rgb(233, 234, 214);
+  --window-dark: rgb(116, 117, 107);
+}
+
+@font-face {
+  font-family: WindowsCommandPrompt;
+  src: url(../assets/Windows-Command-Prompt.woff);
+}
+
+.intro-text {
+  color: white;
+  font-family: "Poppins";
+  background-color: rgba(0,0,0,0.5);
+  width: fit-content;
+  margin-top: 0;
+}
+
+.window {
+  position: absolute;
+  margin-left: var(--xpos);
+  margin-top: var(--ypos);
+  padding: 0 0 0 0;
+  width: fit-content;
+  min-width: max-content;
+
+  font-size: 2em;
+  color: white;
+
+  outline-style: solid;
+  outline-width: 4px;
+  outline-offset: -6px;
+  outline-color: var(--window-normal);
+
+  border-style: solid;
+  border-width: 6px;
+  border-color: var(--window-light) var(--window-dark) var(--window-dark) var(--window-light);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.window .header {
+  min-width: max-content;
+
+  padding-left: 4px;
+  padding-bottom: 0;
+
+  /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
+  font-family: WindowsCommandPrompt, monospace;
+
+  background-image: linear-gradient(90deg, darkblue, lightblue);
+  
+  border-bottom: 2px solid var(--window-normal);
+
+  user-select: none;
+}
+
+.window .header p {
+  margin: 1px;
+}
+
+.window .header button {
+  float: right;
+  padding: 0px;
+  margin: 1px 0px 1px 0px;
+
+  background-color: var(--window-normal);
+  border-color: var(--window-light) var(--window-dark) var(--window-dark) var(--window-light);
+
+  line-height: calc(1.43em - 5px);
+  font-size: 0.7em;
+}
+
+.window .header .close {
+  margin: 1px 2px 1px 3px;
+}
+
+.window .content {
+  width: var(--width);
+  height: var(--height);
+  min-width: 100%;
+  min-height: max-content;
+
+  font-family: WindowsCommandPrompt, monospace;
+
+  background-color: black;
+  
+  border-style: inset;
+  border-width: 2px;
+  border-color: var(--window-normal);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: auto;
+  resize: both;
+}
+
+.window.maximized .content {
+  resize: none;
+  min-width: var(--width);
+  min-height: var(--height);
+}
+
+.window .content p {
+  margin: 0px 4px 0px 4px;
+}
+
+.window .content h1 {
+  margin: 1em 4px 0px 4px;
+  align-self: center;
+}
+
+.window .content h3 {
+  margin: 1em 4px 0px 4px;
+}
+
+.window .content .tutorial {
+  color: transparent;
+  text-decoration: underline yellow;
+
+  background: linear-gradient(
+    90deg,
+    rgb(127,255,127),
+    yellow,
+    rgb(127,255,127)
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: gradientanimation 2s linear infinite;
+}
+
+.window .content .output {
+  white-space: pre-line;
+  height: 100%;
+}
+
+.window .content .output .expanding-console-text {
+  line-height: 1em;
+  text-wrap-mode: nowrap;
+}
+
+.window .popup-content {
+  font-size: 0.8em;
+  min-height: 0;
+}
+
+.window .popup-content p {
+  margin: 1em 4px 0px 4px;
+}
+
+.window .popup-content .header-link {
+  display: flex;
+  font-size: 1.25em;
+  text-align: center;
+  margin: 0.5em 0px 0px 0px;
+  justify-content: space-evenly;
+}
+
+.window .popup-content a {
+  color:aquamarine;
+}
+
+.window .popup-content a:hover {
+  color: transparent;
+  text-decoration: underline blue;
+
+  background: linear-gradient(
+    90deg,
+    aquamarine,
+    blue,
+    aquamarine
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: gradientanimation 2s linear infinite;
+}
+
+.window .popup-content img {
+  width: 50%;
+}
+
+.window .popup-content img.tall {
+  max-width: 40vh;
+}
+
+.window .popup-content img.bordered {
+  width: calc(50% - 8px);
+  border-style: ridge;
+  border-color: var(--window-normal);
+}
+
+.window .popup-content iframe {
+  width: 50%;
+  aspect-ratio: 16/9;
+}
+
+.window .popup-content .left {
+  float: left;
+  text-align: left;
+}
+
+.window .popup-content .left img, .window .popup-content .left iframe {
+  margin-left: 0.25em;
+  float: right;
+}
+
+.window .popup-content .right {
+  float: right;
+  text-align: left;
+}
+
+.window .popup-content .right img, .window .popup-content .right iframe {
+  margin-right: 0.25em;
+  float: left;
+}
+
+.blink {
+  animation-name: blink;
+  animation-duration: 1.05s;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.grabbed {
+  cursor: grabbing;
+}
+
+.ungrabbed {
+  cursor: grab;
+}
+
+@keyframes gradientanimation {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes blink {
+  49% {opacity: 1;}
+  50% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+/* I should move like half of this back to NavWindowBox for navwindow specific parts (headers, content, etc) */
+
+/*Maybe to fix expanding console text I need a css file for it
+Also make expanding console text so that when you hover a child it underlines it*/

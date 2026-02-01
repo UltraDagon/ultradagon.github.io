@@ -1,10 +1,18 @@
 import ProjectPanel from "../components/ProjectPanel";
 import "./all_projects.css";
-import websitepng from "../assets/website.png";
+import projectblankpng from "../assets/projectblank.png";
 import reactsvg from "../assets/react.svg";
 import css3svg from "../assets/css3.svg";
 import html5svg from "../assets/html5.svg";
 import typescriptsvg from "../assets/typescript.svg";
+import mysqlsvg from "../assets/mysql.svg";
+import pythonsvg from "../assets/python.svg";
+import csharpsvg from "../assets/csharp.svg";
+import unitysvg from "../assets/unity.svg";
+import cplusplussvg from "../assets/cplusplus.svg";
+import javascriptsvg from "../assets/javascript.svg";
+import javasvg from "../assets/java.svg";
+import appscriptsvg from "../assets/googleappsscript.svg";
 
 function AllProjects() {
   return (
@@ -13,46 +21,59 @@ function AllProjects() {
         <ProjectPanel
           projectName="ultradagon.github.io"
           description="This website! I wanted to make my own portfolio and have some fun with website development."
-          image={websitepng}
+          image={projectblankpng}
           technologies={[reactsvg, css3svg, html5svg, typescriptsvg]}
           github="https://github.com/UltraDagon/ultradagon.github.io"
-          to="/all-projects/website"
-          filterColor="#2141A3"
+          /*to="/all-projects/website"*/
+          filterColor="#8673A1"
         />
         <ProjectPanel
-          projectName="Project 2"
-          description="Good ole project description."
-          image={websitepng}
-          technologies={[]}
+          projectName="Operating Standards Update"
+          description="A Google Apps Script program that transfers the information from a meeting minutes document to a Google spreadsheet."
+          image={projectblankpng}
+          technologies={[javascriptsvg, appscriptsvg]}
+          github="https://github.com/UltraDagon/OperatingStandardsUpdate"
+          filterColor="#102C54"
+        />
+        <ProjectPanel
+          projectName="Futures Market Bank"
+          description="A mock banking application. Made as a final project for a databases class."
+          image={projectblankpng}
+          technologies={[mysqlsvg, pythonsvg]}
+          github="https://github.com/UltraDagon/FuturesMarketBank"
           filterColor="#7D8471"
         />
         <ProjectPanel
-          projectName="Project 3"
-          description="Good ole project description."
-          image={websitepng}
-          technologies={[]}
+          projectName="Uh oh! / Black Hole Game"
+          description="Uh oh! Something Went Wrong in The Lab! Is a game made for MST's ACM 'Gravity' themed game jam. I created it alongside my good buddy Reece."
+          image={projectblankpng}
+          technologies={[unitysvg, csharpsvg]}
+          github="https://github.com/UltraDagon/BlackHoleGame"
           filterColor="#D5C033"
         />
         <ProjectPanel
-          projectName="Project 4"
-          description="Good ole project description."
-          image={websitepng}
-          technologies={[]}
+          projectName="Mining Game (Name TBD)"
+          description="Mining game I've been working on recently. Going for a Learn to Fly progression style while being a 2d mining game."
+          image={projectblankpng}
+          technologies={[cplusplussvg]}
+          github="https://github.com/UltraDagon/Mining-Game"
           filterColor="#79553D"
         />
         <ProjectPanel
-          projectName="Project 5"
-          description="Good ole project description."
-          image={websitepng}
-          technologies={[]}
+          projectName="FIRST Robotics Scouting App"
+          description="Scouting app for logging information about other teams at FIRST Robotics Competitions. Made for team 1706 Ratchet Rockers."
+          image={projectblankpng}
+          technologies={[javasvg]}
+          github="https://github.com/rr1706/Scouting-2020"
           filterColor="#9B111E"
         />
         <ProjectPanel
-          projectName="Project 6"
-          description="Good ole project description."
-          image={websitepng}
-          technologies={[]}
-          filterColor="#8673A1"
+          projectName="No More Twitter Blue"
+          description="Chrome extension that clears your feed of posts from Twitter Blue accounts."
+          image={projectblankpng}
+          technologies={[javascriptsvg]}
+          github="https://github.com/UltraDagon/NoMoreTwitterBlue"
+          filterColor="#2141A3"
         />
       </div>
     </>

@@ -1,14 +1,18 @@
 .nav-container {
   position: sticky;
   top: 0;
-  padding: 2em;
+  padding: 1em 2em 2em 2em;
   display: inline-flex;
-  width: 100vw;
-  background-image: linear-gradient(to top, rgba(0, 217, 255, 0), rgba(0, 217, 255, 0.25));
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(30, 0, 62, 0.75), rgba(15, 108, 158, 0.75));
+  z-index: 1;
 }
 
 .site-title {
   top: 0;
+  height: 2em;
+  min-height: 2em;
+  width: 20em;
   color: wheat;
 }
 
@@ -35,7 +39,13 @@
   height: 100%;
 }
 
-.nav-links li:hover {
+.nav-links .active {
+  text-decoration: underline wheat;
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: 0.5em;
+}
+
+.nav-links li:not(.active):hover {
   text-decoration: underline wheat;
   text-decoration-thickness: 0.2em;
   text-underline-offset: 0.5em;
