@@ -14,6 +14,9 @@ import portfoliov1Png from "../assets/portfoliov1.png";
 import lolChampMasteryPng from "../assets/lol-champ-mastery.png";
 import nmtbDemoPng from "../assets/nmtb-demo.png";
 import futuresMarketMainMenuPng from "../assets/futures-market-main-menu.png";
+import wsgHomePng from "../assets/wsg-home.png";
+import wsgLobbyPng from "../assets/wsg-lobby.png";
+import wfHomePng from "../assets/wf-home.png";
 
 declare module "react" {
   interface CSSProperties {
@@ -33,10 +36,60 @@ interface Props {
 // This probably isn't a great way to do this, maybe I should have them all as their own individual modules?
 const popupContent = new Map([
   [
+    "Word Scorer Game",
+    <div className="content popup-content">
+      <a
+        href="https://word-scorer-game.onrender.com/"
+        target="_blank"
+        className="header-link"
+      >
+        Visit Website!
+      </a>
+      <a
+        href="https://github.com/UltraDagon/word-scorer-game"
+        target="_blank"
+        className="header-link"
+      >
+        View on GitHub!
+      </a>
+      <p className="left">
+        <img className="bordered tall" src={wsgHomePng} /> Word Scorer Game is a
+        Scrabble-like web game that you can play online with friends!
+        <br />
+        <img className="bordered" src={wsgLobbyPng} />
+      </p>
+    </div>,
+  ],
+  [
+    "WhatFlix",
+    <div className="content popup-content">
+      <a
+        href="https://what-flix.onrender.com/"
+        target="_blank"
+        className="header-link"
+      >
+        Visit Website!
+      </a>
+      <a
+        href="https://github.com/KyleN29/what-flix"
+        target="_blank"
+        className="header-link"
+      >
+        View on GitHub!
+      </a>
+      <p className="left">
+        <img className="bordered" src={wfHomePng} />
+        WhatFlix is a movie recommendation platform I built alongside 2 team
+        members as part of my college Capstone 1 class. You're able to create an
+        account, manage preferences, and search for movies!
+      </p>
+    </div>,
+  ],
+  [
     "Operating Standards Project",
     <div className="content popup-content">
       <a
-        href="https://github.com/UltraDagon/ultradagon.github.io"
+        href="https://github.com/UltraDagon/OperatingStandardsUpdate"
         target="_blank"
         className="header-link"
       >

@@ -16,7 +16,7 @@ function PortfolioV2() {
     xpos: number,
     ypos: number,
     width: number,
-    height: number
+    height: number,
   ) {
     // If window does not already exist and there are less than 3 popUpWindows
     if (
@@ -46,8 +46,8 @@ function PortfolioV2() {
       <NavWindowBox
         xpos={40}
         ypos={50}
-        width={800}
-        height={600}
+        width={document.documentElement.clientWidth / 1.5}
+        height={document.documentElement.clientHeight / 1.5}
         onClickPopUp={createPopUp}
       />
       {popUpWindows.map((item) => (

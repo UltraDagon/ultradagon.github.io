@@ -127,36 +127,42 @@ function NavWindowBox(props: Props) {
           <ExpandingConsoleText
             head="projects"
             children={[
+              <p key={1} onClick={() => clickPopUpLink("Word Scorer Game")}>
+                |--{">"} <span className="pop-up-link">Word_Scorer_Game</span>
+              </p>,
+              <p key={8} onClick={() => clickPopUpLink("WhatFlix")}>
+                |--{">"} <span className="pop-up-link">WhatFlix</span>
+              </p>,
               <p
-                key={1}
+                key={2}
                 onClick={() => clickPopUpLink("Poppy's Scuttle Slugging")}
               >
                 |--{">"}{" "}
                 <span className="pop-up-link">Poppy's_Scuttle_Slugging</span>
               </p>,
               <p
-                key={2}
+                key={3}
                 onClick={() => clickPopUpLink("Operating Standards Project")}
               >
                 |--{">"}{" "}
                 <span className="pop-up-link">Operating_Standards_Project</span>
               </p>,
-              <p key={3} onClick={() => clickPopUpLink("Portfolio Website")}>
+              <p key={4} onClick={() => clickPopUpLink("Portfolio Website")}>
                 |--{">"} <span className="pop-up-link">Portfolio_Website</span>
               </p>,
-              <p key={4} onClick={() => clickPopUpLink("No More Twitter Blue")}>
+              <p key={5} onClick={() => clickPopUpLink("No More Twitter Blue")}>
                 |--{">"}{" "}
                 <span className="pop-up-link">No_More_Twitter_Blue</span>
               </p>,
               <p
-                key={5}
+                key={6}
                 onClick={() => clickPopUpLink("FIRST Robotics Scouting App")}
               >
                 |--{">"}{" "}
                 <span className="pop-up-link">FIRST_Robotics_Scouting_App</span>
               </p>,
               <p
-                key={6}
+                key={7}
                 onClick={() => clickPopUpLink("Future's Market Banking")}
               >
                 `--{">"}{" "}
