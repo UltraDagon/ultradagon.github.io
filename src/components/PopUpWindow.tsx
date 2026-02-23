@@ -17,6 +17,7 @@ import futuresMarketMainMenuPng from "../assets/futures-market-main-menu.png";
 import wsgHomePng from "../assets/wsg-home.png";
 import wsgLobbyPng from "../assets/wsg-lobby.png";
 import wfHomePng from "../assets/wf-home.png";
+import lotrBookJpg from "../assets/lotrbook.jpg";
 
 declare module "react" {
   interface CSSProperties {
@@ -511,16 +512,24 @@ const popupContent = new Map([
       </p>
       <p>
         Programming, especially making games, is my favorite hobby and im super
-        passionate about it. My favorite language is by far C++, though I like
-        Python for leetcode and Typescript for webdev. I'm currently putting the
-        finishing touches on Poppy's Scuttle Slugging, and I plan on diving into
-        Unreal Engine right after.
+        passionate about it. My favorite language is tied between C++ and
+        Typescript, though I use Python often if I want to write code quickly. I
+        just finished making Word Scorer Game, an online real-time Scrabble game
+        that you can play with friends! Right now, I'm looking to make a small
+        3d web game using R3F.
       </p>
       <p className="left">
         <img src={lolChampMasteryPng} />I also play a lot of League of Legends
         during my free time, usually unranked matches with friends. My main
         champion is Kled and I've achieved master tier in ranked (roughly top
         0.5% of players) in 2023 (S13-1) and 2025.
+      </p>
+      <p className="right">
+        <img className="tall" src={lotrBookJpg} />
+        Within the past year I picked up listening to audiobooks! I started out
+        with the Scythe series, which I absolutely loved, and just recently
+        finished The Hobbit! Now I'm listening to The Fellowship of The Ring,
+        and plan on finishing the full LOTR series.
       </p>
     </div>,
   ],
