@@ -508,28 +508,31 @@ const popupContent = new Map([
     <div className="content popup-content">
       <p>
         Hello! My name's Dagon, and I'm currently a senior studying computer
-        science with minors in mathematics and computer engineering.
+        science with minors in mathematics and game design.
       </p>
       <p>
         Programming, especially making games, is my favorite hobby and im super
-        passionate about it. My favorite language is tied between C++ and
-        Typescript, though I use Python often if I want to write code quickly. I
-        just finished making Word Scorer Game, an online real-time Scrabble game
-        that you can play with friends! Right now, I'm looking to make a small
-        3d web game using R3F.
+        passionate about it. My primary language is C++, though I use Typescript
+        and Python for their own niches. This past summer 2026, I wrapped up my
+        time as a Google Summer of Code Contributor for Tiled, where I was in
+        charge of developing the{" "}
+        <a href="https://summerofcode.withgoogle.com/programs/2026/projects/BahR0KDx">
+          "New Hardware Renderer"
+        </a>{" "}
+        project.
       </p>
       <p className="left">
         <img src={lolChampMasteryPng} />I also play a lot of League of Legends
         during my free time, usually unranked matches with friends. My main
-        champion is Kled and I've achieved master tier in ranked (roughly top
-        0.5% of players) in 2023 (S13-1) and 2025.
+        champion is Kled and I've achieved grandmaster tier in ranked (roughly
+        top 1000 players in NA) in 2026.
       </p>
       <p className="right">
         <img className="tall" src={lotrBookJpg} />
-        Within the past year I picked up listening to audiobooks! I started out
-        with the Scythe series, which I absolutely loved, and just recently
-        finished The Hobbit! Now I'm listening to The Fellowship of The Ring,
-        and plan on finishing the full LOTR series.
+        During long drives or just walking to class I like listening to
+        audiobooks. I started out with the Scythe series, which I absolutely
+        loved, and just recently finished The Hobbit! Now I'm listening to The
+        Fellowship of The Ring, and plan on finishing the full LOTR series.
       </p>
     </div>,
   ],
